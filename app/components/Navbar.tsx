@@ -26,6 +26,9 @@ function Navbar() {
             <li>
                 <a href="#faq">FAQ</a>
             </li>
+            <li>
+                <a href="https://2024.garudahacks.com/">2024</a>
+            </li>
         </ul>
         <ApplyButton />
     </nav>

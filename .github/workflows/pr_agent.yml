@@ -2,15 +2,16 @@ on:
   pull_request:
     types: [opened, reopened, ready_for_review]
   issue_comment:
+    types: [created]
 jobs:
   pr_agent_job:
-    if: ${{ github.event.sender.type != 'Bot' }}
+    if: ${{ github.event.sender.type != 'Bot' && github.event.comment.body == '/review' }}
     runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
       contents: write
-    name: Run pr agent on every pull request
+    name: Run PR Agent on command /review
     steps:
       - name: PR Agent action step
         id: pragent

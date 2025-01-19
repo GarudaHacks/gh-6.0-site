@@ -3,7 +3,7 @@ import React from 'react'
 function Hero() {
   return (
     <section id="hero">
-      Garudahacks 6.0
+      Garuda Hacks 6.0
     </section>
   )
 }

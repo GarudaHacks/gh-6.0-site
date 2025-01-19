@@ -11,7 +11,7 @@ function Navbar() {
             <a href="#hero">
                 <Image 
                     src="/images/logo/ghq.png"
-                    alt="Garudahacks logo"
+                    alt="Garuda Hacks logo"
                     width={25}
                     height={55}
                 />

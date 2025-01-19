@@ -1,6 +1,6 @@
 import React from 'react'
 
-// This section contains information regarding Garudahacks' core mission and values
+// This section contains information regarding Garuda Hacks' core mission and values
 // Particularly, what hackers can expect from GH 6.0, and pictures from previous years
 function About() {
   return (

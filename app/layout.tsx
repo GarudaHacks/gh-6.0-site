@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Garudahacks 6.0",
+  title: "Garuda Hacks 6.0",
   description: "Landing page for GH 6.0",
 };
 

@@ -1,6 +1,4 @@
 import React from 'react'
-import About from '../sections/About'
-import Link from 'next/link'
 import Image from 'next/image'
 import ApplyButton from './ApplyButton'
 

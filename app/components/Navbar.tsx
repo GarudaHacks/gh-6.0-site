@@ -27,7 +27,10 @@ function Navbar() {
             </li> */}
       </ul>
       {/* <ApplyButton /> */}
-      <a className="font-bold text-lg" href="https://2024.garudahacks.com/">
+      <a
+        className="font-bold text-lg font-[family-name:var(--font-montserrat)]"
+        href="https://2024.garudahacks.com/"
+      >
         Past Events
       </a>
     </nav>

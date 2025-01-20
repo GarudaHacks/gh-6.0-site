@@ -31,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={`h-full flex flex-col overflow-hidden antialiased ${geistSans.variable} ${geistMono.variable} ${montserrat.variable}`}>
+      <body
+        className={`h-full flex flex-col overflow-hidden antialiased ${geistSans.variable} ${geistMono.variable} ${montserrat.variable}`}
+      >
         <div id="root" className="flex flex-col h-full">
           <Navbar />
 

@@ -27,7 +27,7 @@ function Navbar() {
             </li> */}
       </ul>
       {/* <ApplyButton /> */}
-      <a className="font-bold text-lg" href="https://2024.garudahacks.com/">
+      <a className="font-bold text-lg underline" href="https://2024.garudahacks.com/">
         2024
       </a>
     </nav>

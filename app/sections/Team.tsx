@@ -12,15 +12,15 @@ type Member = {
 
 function bgColorOnTitle(title: string) {
   if (title.includes("Tech & Hack")) {
-    return "bg-sky-950";
+    return { bg: "bg-sky-800", border: "border-sky-900" };
   } else if (title.includes("Logistics")) {
-    return "bg-green-600";
+    return { bg: "bg-green-600", border: "border-green-700" };
   } else if (title.includes("Marketing")) {
-    return "bg-yellow-700";
+    return { bg: "bg-yellow-700", border: "border-yellow-800" };
   } else if (title.includes("Managing Director")) {
-    return "bg-red-800";
+    return { bg: "bg-red-800", border: "border-red-800" };
   } else if (title.includes("Partnerships")) {
-    return "bg-purple-600";
+    return { bg: "bg-purple-600", border: "border-purple-700" };
   }
 }
 
@@ -48,8 +48,8 @@ function Team() {
             <Image 
               src={`/profiles/${member.profile}`} 
               alt={member.name} 
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               key={index}
               className="!aspect-square object-cover rounded-lg cursor-pointer hover:border-white hover:border-[2px] hover:!opacity-100 group-hover:opacity-50"
               onMouseEnter={() => setHoveredMember(member)}
@@ -61,7 +61,7 @@ function Team() {
       {hoveredMember && (
       <div className="absolute bottom-[-8rem] flex flex-col items-center gap-2 rounded-lg text-center p-4 transition-all duration-200">
         <div className="font-semibold text-md">{hoveredMember.name}</div>
-        <div className={`text-sm text-neutral-200 max-w-fit rounded-full py-2 px-4 ${bgColorOnTitle(hoveredMember.title)}`}>{hoveredMember.title}</div>
+        <div className={`text-sm text-neutral-200 max-w-fit rounded-full py-2 px-4 border-[1px] ${bgColorOnTitle(hoveredMember.title)?.bg} ${bgColorOnTitle(hoveredMember.title)?.border}`}>{hoveredMember.title}</div>
       </div>
       )}
     </div>

@@ -9,8 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#001745",
+        primary: "#FF0068",
+        secondary: "#D900FF",
       },
       animation: {
         blink: "blink 1s ease-in-out infinite",

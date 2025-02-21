@@ -1,0 +1,169 @@
+{
+    "teams": [
+        {
+            "team_name": "Leadership",
+            "executives": [
+                {
+                    "name": "Maria Gracia Athalia",
+                    "title": "Managing Director",
+                    "profile": "Maria.png"
+                },
+                {  
+                    "name": "Dominic Moreno Kartadjoemena",
+                    "title": "Managing Director",
+                    "profile": "Dominic.png"
+                }
+            ]
+        },
+        {
+            "team_name": "Marketing and Design",
+            "executives": [
+                {
+                    "name": "Ralph Benedict Soemali",
+                    "title": "Marketing and Design Director",
+                    "profile": "Ben.png"
+                },
+                {  
+                    "name": "Willy",
+                    "title": "Marketing and Design Director",
+                    "profile": "Willy.png"
+                },
+                {
+                    "name": "Kania Ramadhani",
+                    "title": "Marketing and Content Coordinator",
+                    "profile": "Kania.png"
+                },
+                {
+                    "name": "Margery Jessica Santoso",
+                    "title": "Marketing and Content Coordinator",
+                    "profile": "Jess.png"
+                },
+                {
+                    "name": "Eleonora Ansella Kartono",
+                    "title": "Marketing and Design Coordinator",
+                    "profile": "Ansella.png"
+                },
+                {
+                    "name": "Irma Nur Cahyani",
+                    "title": "Marketing and Design Coordinator",
+                    "profile": "Irma.png"
+                },
+                {
+                    "name": "Audrey Clarissa",
+                    "title": "Marketing and Design Coordinator",
+                    "profile": "Audrey.png"
+                },
+                {
+                    "name": "Putra Pratama Miharjo",
+                    "title": "Marketing and Design Coordinator",
+                    "profile": "Putra.jpg"
+                },
+                {
+                    "name": "Jennise Angeline",
+                    "title": "Marketing and Content Coordinator",
+                    "profile": "Jennise.png"
+                },
+                {
+                    "name": "Amelia Muliawati",
+                    "title": "Marketing and Content Coordinator",
+                    "profile": "Amelia.png"
+                },
+                {
+                    "name": "Muhammad Fahrurridho",
+                    "title": "Marketing and Design Coordinator",
+                    "profile": "Ridho.png"
+                }
+            ]
+        },
+        {
+            "team_name": "Tech and Hack Experience",
+            "executives": [
+                {
+                    "name": "Hibatullah Fawwaz Hana",
+                    "title": "Tech & Hack Director",
+                    "profile": "Hiba.png"
+                },
+                {  
+                    "name": "Roselina Kezia Rijadi",
+                    "title": "Tech & Hack Director",
+                    "profile": "Kez.jpg"
+                },
+                {  
+                    "name": "Heryan Djaruma",
+                    "title": "Tech & Hack Coordinator",
+                    "profile": "Ryan.png"
+                },
+                {
+                    "name": "Dewangga Dewata Indera",
+                    "title": "Tech & Hack Coordinator",
+                    "profile": "Angga.png"
+                },
+                {  
+                    "name": "Winner Rasendriya",
+                    "title": "Tech & Hack Coordinator",
+                    "profile": "Winner.png"
+                },
+                {  
+                    "name": "Utkarsh Sandilya",
+                    "title": "Tech & Hack Coordinator",
+                    "profile": "Krish.jpg"
+                },
+                {  
+                    "name": "Hafidz Muhammad Rizky",
+                    "title": "Tech & Hack Coordinator",
+                    "profile": "Rizky.png"
+                }
+            ]
+        },
+        {
+            "team_name": "Partnerships",
+            "executives": [
+                {
+                    "name": "Rio Agustino Handoyo",
+                    "title": "Partnerships Director",
+                    "profile": "Rio.png"
+                },
+                {  
+                    "name": "Lynn Louise",
+                    "title": "Partnerships Director",
+                    "profile": "Lynn.jpg"
+                }
+            ]
+        },
+        {
+            "team_name": "Logistics",
+            "executives": [
+                {
+                    "name": "Jonathan Hendraja",
+                    "title": "Logistics Director",
+                    "profile": "Jonathan_Hendraja.png"
+                },
+                {
+                    "name": "Christine Calin",
+                    "title": "Logistics Director",
+                    "profile": "Christine.jpg"
+                },
+                {  
+                    "name": "Jonathan Cornelius Lai",
+                    "title": "Logistics Coordinator",
+                    "profile": "Jonathan_Cornelius.png"
+                },
+                {
+                    "name": "Samuel Theodore Gunawan",
+                    "title": "Logistics Coordinator",
+                    "profile": "Samuel.png"
+                },
+                {
+                    "name": "Izabel Bianca Santoso",
+                    "title": "Logistics Coordinator",
+                    "profile": "Izzi.jpg"
+                },
+                {
+                    "name": "Emily Jade Limi",
+                    "title": "Logistics Coordinator",
+                    "profile": "Emily_Jade.png"
+                }
+            ]
+        }
+    ]
+}

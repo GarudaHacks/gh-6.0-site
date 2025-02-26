@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #141414;
+  --background: #001745;
   --foreground: #171717;
 }
 
@@ -31,4 +31,10 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
 }

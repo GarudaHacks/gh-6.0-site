@@ -21,7 +21,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Garuda Hacks 6.0",
-  description: "GH 6.0 Landing Page",
+  description: "Landing page for GH 6.0",
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`h-full flex flex-col overflow-hidden bg-background antialiased ${montserrat.variable}`}
+        className={`h-full flex flex-col overflow-hidden antialiased ${geistSans.variable} ${geistMono.variable} ${montserrat.variable}`}
       >
         <div id="root" className="flex flex-col h-full">
           <Navbar />

@@ -9,23 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#001745",
-        primary: "#FF0068",
-        secondary: "#D900FF",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
       animation: {
         blink: "blink 1s ease-in-out infinite",
-        teamScroll: "scroll 15s linear infinite",
       },
       keyframes: {
         blink: {
           "0%, 100%": { opacity: "0" },
           "50%": { opacity: "1" },
         },
-        scroll: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        }
       },
     },
   },

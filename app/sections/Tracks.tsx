@@ -1,13 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { FaSeedling, FaChevronDown, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { tracksData } from '@/app/data/tracks';
+import { memo } from 'react';
 
-
-export default function Tracks() {
+const Tracks = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const expandedTrack = useMemo(() => (expandedIndex !== null ? tracksData[expandedIndex] : null), [expandedIndex]);
 
   return (
     <div className="flex flex-col items-center py-10 px-5 relative">
@@ -41,7 +43,7 @@ export default function Tracks() {
       </div>
       
       <AnimatePresence>
-        {expandedIndex !== null && (
+        {expandedTrack && (
           <motion.div
             className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-lg z-50"
             initial={{ opacity: 0 }}
@@ -71,12 +73,14 @@ export default function Tracks() {
                 <FaTimes size={24} style={{ color: '#FF0068' }} />
               </button>
               <div className="w-16 h-16 bg-gray-300 rounded-full mb-4"></div>
-              <h3 className="text-xl font-semibold text-white">{tracksData[expandedIndex].title}</h3>
-              <p className="text-left text-sm mt-4 text-gray-200 w-10/12">{tracksData[expandedIndex].description}</p>
+              <h3 className="text-xl font-semibold text-white">{expandedTrack.title}</h3>
+              <p className="text-left text-sm mt-4 text-gray-200 w-10/12">{expandedTrack.description}</p>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
   );
-}
+};
+
+export default memo(Tracks);

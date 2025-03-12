@@ -1,25 +1,10 @@
 'use client';
+
 import { useState } from 'react';
 import { FaSeedling, FaChevronDown, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { tracksData } from '@/app/data/tracks';
 
-const tracksData = [
-  {
-    title: 'What is Lorem Ipsum',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown.',
-  },
-  {
-    title: 'What is Lorem Ipsum',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown.',
-  },
-  {
-    title: 'What is Lorem Ipsum',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown.',
-  },
-];
 
 export default function Tracks() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);

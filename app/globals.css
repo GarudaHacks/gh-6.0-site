@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #001745;
+  --background: #000F2B;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #141414;
+    --background: #000F2B;
     --foreground: #ededed;
   }
 }
@@ -31,6 +31,11 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.radial-blur {
+  filter: blur(80px);
+  opacity: 0.5;
 }
 
 @layer utilities {

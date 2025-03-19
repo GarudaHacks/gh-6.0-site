@@ -17,6 +17,9 @@ export default {
         blink: "blink 1s ease-in-out infinite",
         teamScroll: "scroll 15s linear infinite",
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
+      },
       keyframes: {
         blink: {
           "0%, 100%": { opacity: "0" },

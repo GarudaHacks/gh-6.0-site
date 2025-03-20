@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Garuda Hacks 6.0",
-  description: "GH 6.0 Landing Page",
+  description: "Landing page for GH 6.0",
 };
 
 export default function RootLayout({

@@ -35,6 +35,8 @@ export default function RootLayout({
         <img src={"assets/ellipse1.svg"} width={800} height={800} className="absolute top-[30vh] md:-left-50 object-fill"/> */}
         <img src={"assets/curve1.svg"} width={500} height={500} className="absolute top-[50vh] right-0"/>
         <img src={"assets/curve2.svg"} width={500} height={500} className="absolute top-[100vh] -left-60"/>
+        <img src={"assets/curve3.svg"} width={800} height={800} className="absolute top-[220vh] -right-[25rem]"/>
+        <img src={"assets/curve3.svg"} width={700} height={700} className="absolute top-[270vh] -left-[24rem]"/>
         </div>
 
         <Navbar />

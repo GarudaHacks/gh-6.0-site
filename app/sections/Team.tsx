@@ -40,7 +40,7 @@ function Team() {
   );
 
   return (
-    <div className="relative max-w-[100vw] flex flex-col items-center justify-center">
+    <div className="relative max-w-[100vw] flex flex-col items-center justify-center pb-12">
       <div className="mb-[6vh] font-normal">Brought to you with 🤍 by the <span className="font-bold">Garuda Hacks</span> team</div>
 
       <div className="flex gap-[2rem] animate-teamScroll w-full hover:pause group">
@@ -59,7 +59,7 @@ function Team() {
       </div>
 
       {hoveredMember && (
-      <div className="absolute bottom-[-8rem] flex flex-col items-center gap-2 rounded-lg text-center p-4 transition-all duration-200">
+      <div className="absolute top-[12rem] flex flex-col items-center gap-2 rounded-lg text-center p-4 transition-all duration-200">
         <div className="font-semibold text-md">{hoveredMember.name}</div>
         <div className={`text-sm text-neutral-200 max-w-fit rounded-full py-2 px-4 border-[1px] ${bgColorOnTitle(hoveredMember.title)?.bg} ${bgColorOnTitle(hoveredMember.title)?.border}`}>{hoveredMember.title}</div>
       </div>

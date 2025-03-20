@@ -1,8 +1,10 @@
-import ComingSoon from "./components/ComingSoon";
 import About from "./sections/About";
 import Countdown from "./sections/Countdown";
+import FAQ from "./sections/FAQ";
 import Hero from "./sections/Hero";
+import Stats from "./sections/Stats";
 import Team from "./sections/Team";
+import Tracks from "./sections/Tracks";
 
 const targetDate = "2025-06-20T00:00:00"
 
@@ -13,13 +15,16 @@ export default function Home() {
         <Hero />
         <Countdown targetDate={targetDate}/>
         <About />
-        {/*
         <Stats />
+        {/*
         <Stories />
+        */}
         <Tracks />
+        {/*
         <Judges />
         <Sponsors />
-        <FAQ /> */}
+        */}
+        <FAQ />
         <Team /> 
         {/* <ComingSoon /> */}
       </main>

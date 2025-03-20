@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { FaSeedling, FaChevronDown, FaTimes } from 'react-icons/fa';
+import { FaChevronDown, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { tracksData } from '@/app/data/data';
 import { memo } from 'react';

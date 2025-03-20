@@ -31,7 +31,7 @@ function Hero() {
           {/* Right Content */}
           <div className="flex flex-col gap-6 md:pl-[8vw] mt-[6vh] items-start">
             <div className="text-3xl font-semibold max-w-[80%]">
-              Be part of Indonesia's largest hackathon.
+              Be part of Indonesia&apos;s largest hackathon.
             </div>
             <div className="flex sm:flex-col md:flex-row gap-3">
               <ApplyButton />

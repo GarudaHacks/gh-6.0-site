@@ -1,3 +1,7 @@
+// THEME
+// const themeDescription = `Indonesia is a nation rich in diversity, yet we often struggle to align our actions with the narratives we claim to embody. Are we truly the "Paru paru dunia", or have our environmental actions told a different story? Do we live up to the ideal of being "a friendly and polite society", even in online spaces? Through this hackathon, we aim to empower youth to reimagine Indonesia’s narrative, bridging the gap between ideals and actions with technology and innovation.`
+
+// TRACKS
 export const tracksData = [
   {
     title: 'What is Lorem Ipsum',
@@ -16,6 +20,7 @@ export const tracksData = [
   },
 ];
 
+// FAQ
 export const faqData = [
   {
     question: "FAQ 1",

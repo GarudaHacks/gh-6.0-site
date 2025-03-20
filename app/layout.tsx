@@ -9,11 +9,6 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-const proximaNova = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: "Garuda Hacks 6.0",
   description: "GH 6.0 Landing Page",

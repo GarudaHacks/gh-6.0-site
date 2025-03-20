@@ -6,7 +6,7 @@ interface ContainerProps {
 
 function Container({ children }:ContainerProps) {
   return (
-    <div className="p-6 md:p-12 min-h-[90vh] flex items-center justify-content">
+    <div className="p-6 md:p-16 min-h-[90vh] flex items-center justify-content">
         {children}
     </div>
   )

@@ -28,7 +28,7 @@ function Countdown({ targetDate }: CountdownProps) {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
-  }, [calculateTimeLeft]);
+  }, []);
 
   if (!timeLeft) {
     return <div className="text-white text-lg">...</div>;

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #141414;
+  --background: #000F2B;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #141414;
+    --background: #000F2B;
     --foreground: #ededed;
   }
 }
@@ -23,7 +23,7 @@ html, body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Montserrat;
   display: flex;
 }
 
@@ -31,4 +31,15 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.radial-blur {
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
 }

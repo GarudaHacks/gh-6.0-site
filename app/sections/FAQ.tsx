@@ -1,34 +1,8 @@
 "use client";
 import React, { useState } from "react";
+import { faqData } from "../data/data";
 import { FaPlus, FaMinus } from "react-icons/fa";
-
-const faqData = [
-  {
-    question: "FAQ 1",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu nunc mi. Vivamus iaculis libero vel mollis eleifend. Morbi dapibus fermentum tincidunt.",
-  },
-  {
-    question: "FAQ 2",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu nunc mi. Vivamus iaculis libero vel mollis eleifend. Morbi dapibus fermentum tincidunt.",
-  },
-  {
-    question: "FAQ 3",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu nunc mi. Vivamus iaculis libero vel mollis eleifend. Morbi dapibus fermentum tincidunt.",
-  },
-  {
-    question: "FAQ 4",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu nunc mi. Vivamus iaculis libero vel mollis eleifend. Morbi dapibus fermentum tincidunt.",
-  },
-  {
-    question: "FAQ 5",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu nunc mi. Vivamus iaculis libero vel mollis eleifend. Morbi dapibus fermentum tincidunt.",
-  },
-];
+import Container from "../components/Container";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -38,6 +12,7 @@ const FAQ = () => {
   };
 
   return (
+    <Container>
     <section id="faq" className="flex flex-col items-center">
       <h2 className="text-center text-3xl font-bold mb-8 text-white">
         Frequently Asked Questions
@@ -74,6 +49,7 @@ const FAQ = () => {
         ))}
       </div>
     </section>
+    </Container>
   );
 };
 

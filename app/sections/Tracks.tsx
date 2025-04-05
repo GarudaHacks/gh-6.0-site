@@ -3,9 +3,11 @@
 import { useState, useMemo } from 'react';
 import { FaChevronDown, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import { tracksData } from '../data/tracks';
+import { tracksData } from '../data/data';
 import { memo } from 'react';
 import Container from '../components/Container';
+
+const theme = "Garuda Hacks 6.0 challenges participants to build solutions that bring Indonesia's ideals closer to its lived reality. Whether through sustainability, cultural preservation, or civic engagement, this hackathon is about transforming narratives into tangible impact."
 
 const Tracks = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -15,6 +17,28 @@ const Tracks = () => {
   return (
     <Container>
       <div className="flex flex-col items-center py-10 px-5 relative">
+         {/* Theme Section */}
+         <div className="text-center space-y-12">
+            {/* Identity through Innovation */}
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <h3 className="text-6xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                  identity
+                </h3>
+                <p className="text-xl">through</p>
+                <h3 className="text-6xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                  innovation
+                </h3>
+              </div>
+            </div>
+
+            {/* Theme Description */}
+            <div className="max-w-2xl mx-auto">
+              <p className="text-lg text-gray-300 leading-relaxed">
+                {theme}
+              </p>
+            </div>
+          </div>
         <h2 className="text-3xl font-bold text-white mb-6">OUR TRACKS</h2>
         <div className="flex gap-6 justify-center relative">
           {tracksData.map((track, index) => (

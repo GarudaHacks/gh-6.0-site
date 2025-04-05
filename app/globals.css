@@ -32,3 +32,16 @@ body {
   animation: teamScroll 30s linear infinite;
 }
 
+@keyframes projectScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 4 - 1.5rem * 4)); /* Adjust based on card width and gap */
+  }
+}
+
+.animate-projectScroll {
+  animation: projectScroll 30s linear infinite;
+}
+

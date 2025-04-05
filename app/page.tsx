@@ -23,7 +23,6 @@ export default function Home() {
         <Stories />
         */}
         <Tracks />
-        <Stats />
         {/*
         <Judges />
         */}

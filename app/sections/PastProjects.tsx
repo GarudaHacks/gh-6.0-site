@@ -1,83 +1,166 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Container from "../components/Container";
 import Image from "next/image";
-
-const projects = [
-  {
-    title: "HijauKita",
-    description: "HijauKita is an app designed to encourage community participation in sustainability activities in Indonesia. It addresses environmental and social challenges by providing information on SDGs activities like tree planting and waste collection.",
-    image: "/assets/projects/hijaukita.png",
-    link: "https://devpost.com/software/hijaukita?_gl=1*o9r3wd*_gcl_au*ODk2NDczMTI1LjE3MzYxOTI1MzM.*_ga*MTA1ODc5ODQxNy4xNzE1ODY5MjU1*_ga_0YHJK3Y10M*MTc0MzgzMDA4MC4yNi4xLjE3NDM4MzAxODkuMC4wLjA.",
-  },
-  {
-    title: "Aspiring AI",
-    description: "Aspiring AI is an AI-powered platform that helps students create a compelling tech portfolio in 15 minutes, giving them a better chance to land their dream tech internship. It uses AI to write the portfolio text and convert profiles into professional pages",
-    image: "/assets/projects/aspiringAI.png",
-    link: "https://devpost.com/software/p-lbraso?_gl=1*8furrd*_gcl_au*ODk2NDczMTI1LjE3MzYxOTI1MzM.*_ga*MTA1ODc5ODQxNy4xNzE1ODY5MjU1*_ga_0YHJK3Y10M*MTc0MzgzMDA4MC4yNi4xLjE3NDM4MzAyNTAuMC4wLjA.",
-  },
-  {
-    title: "Jendela",
-    description: "Jendela helps ex-convicts find jobs by connecting them with training centers and business partners, providing skills like cooking, makeup, and barista, offering a new start.",
-    image: "/assets/projects/jendela.png",
-    link: "https://devpost.com/software/jendela?_gl=1*837o5i*_gcl_au*ODk2NDczMTI1LjE3MzYxOTI1MzM.*_ga*MTA1ODc5ODQxNy4xNzE1ODY5MjU1*_ga_0YHJK3Y10M*MTc0MzgzMDA4MC4yNi4xLjE3NDM4MzA2NTEuMC4wLjA.",
-  },
-  {
-    title: "JalanKami",
-    description: "JalanKami is a platform improving urban walkability by providing tools like an interactive map, a forum for reporting infrastructure issues, an area summarizer for insights, and a sidewalk detection tool for gauging accessibility",
-    image: "/assets/projects/jalankami.jpg",
-    link: "https://devpost.com/software/jalankami",
-  },
-];
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { projects } from "../data/data";
 
 function PastProjects() {
+  const [projectsPerPage, setProjectsPerPage] = useState<number | null>(3);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const cardWidth = 350;
+  const cardGap = 24;
+
+  // Update projectsPerPage based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1200) {
+        setProjectsPerPage(3);
+      } else if (window.innerWidth >= 800) {
+        setProjectsPerPage(2);
+      } else {
+        setProjectsPerPage(1);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Hydration fix: Only render content when projectsPerPage is set
+  if (projectsPerPage === null) {
+    return null; 
+  }
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex >= projects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
+  };
+
+  const totalPages = projects.length;
+
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, [currentIndex]);
+
   return (
     <section id="past-projects" className="w-full py-16">
       <Container>
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
-          Garuda Hacks Past Projects
+          Past Projects
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden rounded-lg border border-white bg-gradient-to-b from-[rgba(177,177,177,0.20)] to-[rgba(127,127,127,0.60)] backdrop-blur-sm"
+        <div className="relative">
+          {/* Center container with fixed width */}
+          <div
+            className="mx-auto"
+            style={{
+              width: `${
+                cardWidth * projectsPerPage + cardGap * (projectsPerPage - 1)
+              }px`,
+              maxWidth: "100%",
+            }}
+          >
+            {/* Navigation Buttons */}
+            <button
+              type="button"
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 text-white hover:text-[#FF0068] transition-colors"
             >
-              <Image
-                src={project.image || "/placeholder.svg"}
-                alt={project.title}
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-white">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 text-sm mt-2">
-                  {project.description}
-                </p>
-                <a
-                  href={project.link}
-                  className="inline-block mt-4 px-4 py-2 bg-[#FF0068] text-white font-semibold rounded-md hover:bg-opacity-90 transition"
-                >
-                  Learn More
-                </a>
+              <FaChevronLeft size={24} />
+            </button>
+
+            <button
+              type="button"
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 text-white hover:text-[#FF0068] transition-colors"
+            >
+              <FaChevronRight size={24} />
+            </button>
+
+            {/* Projects Container */}
+            <div className="overflow-hidden">
+              <div
+                className="flex gap-6 transition-transform duration-500"
+                style={{
+                  transform: `translateX(-${
+                    currentIndex * (cardWidth + cardGap)
+                  }px)`,
+                }}
+              >
+                {projects.map((project, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      width: `${cardWidth}px`,
+                      flexShrink: 0,
+                    }}
+                  >
+                    <ProjectCard project={project} />
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
 
-        <div className="flex justify-center mt-8">
-          <div className="flex space-x-2">
-            <span className="w-2 h-2 rounded-full bg-[#FF0068]"></span>
-            <span className="w-2 h-2 rounded-full bg-white opacity-50"></span>
-            <span className="w-2 h-2 rounded-full bg-white opacity-50"></span>
+            {/* Page dots */}
+            <div className="flex justify-center mt-8 gap-2">
+              {projects.map((_, index) => (
+                <button
+                  type="button"
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    currentIndex === index
+                      ? "bg-[#FF0068]"
+                      : "bg-white opacity-50"
+                  }`}
+                  onClick={() => setCurrentIndex(index)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </Container>
     </section>
   );
 }
+
+// Move ProjectCard outside of the main component
+const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
+  <div className="relative h-full overflow-hidden rounded-lg border border-white bg-gradient-to-b from-[rgba(177,177,177,0.20)] to-[rgba(127,127,127,0.60)] backdrop-blur-sm group hover:border-[#FF0068] transition-all duration-300">
+    <Image
+      src={project.image || "/placeholder.svg"}
+      alt={project.title}
+      width={350}
+      height={200}
+      className="w-full h-48 object-cover"
+    />
+    <div className="p-4">
+      <h3 className="text-xl font-semibold text-white group-hover:text-[#FF0068] transition-colors">
+        {project.title}
+      </h3>
+      <p className="text-gray-300 text-sm mt-2 h-[60px] overflow-hidden">
+        {project.description}
+      </p>
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-4 px-4 py-2 bg-[#FF0068] text-white font-semibold rounded-md hover:bg-opacity-90 transition"
+      >
+        Learn More
+      </a>
+    </div>
+  </div>
+);
 
 export default PastProjects;

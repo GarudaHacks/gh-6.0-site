@@ -14,21 +14,20 @@ const content = {
 // Particularly, what hackers can expect from GH 6.0, and pictures from previous years
 function About() {
   return (
-    <section id="about" className="min-h-screen py-20">
+    <section id="about" className="min-h-[70vh] py-20">
       <Container>
-        <div className="max-w-4xl mx-auto space-y-20">
-          {/* Tagline */}
-          <div className="text-center">
-            <p className="text-xl font-semibold text-[#FF0068]">
-              {content.tagline}
-            </p>
-          </div>
-          {/* What is GarudaHacks Section */}
+        <div className="max-w-3xl mx-auto space-y-20">
           <div className="text-center space-y-6">
-            <h2 className="text-4xl font-bold text-white">
-              What is Garudahacks?
+            <h2 className="text-6xl font-bold text-white">
+              What is <i>Garudahacks</i>?
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            {/* Tagline */}
+            <div className="text-center">
+              <p className="text-2xl font-semibold text-[#FF0068]">
+                {content.tagline}
+              </p>
+            </div>
+            <p className="text-md font-normal text-gray-300 leading-relaxed">
               {content.description}
             </p>
           </div>

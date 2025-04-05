@@ -37,7 +37,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-350px * 4 - 1.5rem * 4)); /* Adjust based on card width and gap */
+    transform: translateX(calc(-350px * 4 - 1.5rem * 4));
   }
 }
 

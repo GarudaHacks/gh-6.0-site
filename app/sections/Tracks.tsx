@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { FaChevronDown, FaTimes } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { tracksData } from "../data/data";
 import Container from "../components/Container";
 
@@ -11,11 +11,6 @@ const theme =
 
 const Tracks = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-
-  const expandedTrack = useMemo(
-    () => (expandedIndex !== null ? tracksData[expandedIndex] : null),
-    [expandedIndex]
-  );
 
   return (
     <Container>

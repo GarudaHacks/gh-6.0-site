@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Container from "../components/Container";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { projects } from "../data/data";
 
 function PastProjects() {
-  const [projectsPerPage, setProjectsPerPage] = useState<number | null>(3);
+  const [projectsPerPage, setProjectsPerPage] = useState<number | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const cardWidth = 350;
   const cardGap = 24;
@@ -29,32 +29,34 @@ function PastProjects() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Hydration fix: Only render content when projectsPerPage is set
-  if (projectsPerPage === null) {
-    return null; 
-  }
-
-  const nextSlide = () => {
+  // Memoize navigation functions to stabilize dependencies
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex >= projects.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, []);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projects.length - 1 : prevIndex - 1
     );
-  };
-
-  const totalPages = projects.length;
+  }, []);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, [currentIndex]);
+    // Only run the timer if projectsPerPage is determined
+    if (projectsPerPage !== null) {
+      const timer = setInterval(nextSlide, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [currentIndex, nextSlide, projectsPerPage]);
+
+  // Hydration fix: Only render content when projectsPerPage is set
+  if (projectsPerPage === null) {
+    return null;
+  }
 
   return (
-    <section id="past-projects" className="w-full py-16">
+    <section id="past-projects" className="w-full my-[30vh]">
       <Container>
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
           Past Projects

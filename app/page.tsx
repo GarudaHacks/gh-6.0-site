@@ -2,7 +2,6 @@ import About from "./sections/About";
 import Countdown from "./sections/Countdown";
 import FAQ from "./sections/FAQ";
 import Hero from "./sections/Hero";
-import Judges from "./sections/Judges";
 import PastProjects from "./sections/PastProjects";
 import Stats from "./sections/Stats";
 import Team from "./sections/Team";

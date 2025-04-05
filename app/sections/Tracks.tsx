@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import { FaChevronDown, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import { tracksData } from '@/app/data/data';
+import { tracksData } from '../data/tracks';
 import { memo } from 'react';
 import Container from '../components/Container';
 

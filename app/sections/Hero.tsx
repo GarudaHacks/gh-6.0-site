@@ -6,7 +6,7 @@ function Hero() {
   return (
     <section id="hero">
       <Container>
-        <div className="grid sm:grid-rows-2 md:grid-rows-1 md:grid-cols-2 max-w-full items-center">
+        <div className="grid min-h-[80vh] sm:grid-rows-2 md:grid-rows-1 md:grid-cols-2 max-w-full items-center">
           
           {/* Left Content */}
           <div className="flex flex-col gap-y-4 items-start text-left max-w-[90%] md:pl-12">
@@ -19,10 +19,10 @@ function Hero() {
               <img 
                 src="/assets/hero_label.svg" 
                 alt="6.0 label" 
-                className="absolute bottom-[1vh] left-[85%] w-[8rem]"
+                className="absolute bottom-[3vh] left-[85%] w-[8rem]"
               />
             </div>
-            <div className="text-primary sm:text-2xl md:text-5xl font-medium font-mono">
+            <div className="text-primary sm:text-xl md:text-3xl font-bold font-mono">
               July 24 - 26 2025
             </div>
             <div className="text-xl font-medium">Universitas Multimedia Nusantara</div>

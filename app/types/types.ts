@@ -1,9 +1,32 @@
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons"
 
-export type Stat = {
-  icon: IconType;
-  heading: string;
-  subtitle: string;
-};
+export interface Stat {
+  icon: IconType
+  heading: string
+  subtitle: string
+}
 
+export interface Track {
+  title: string
+  description: string
+  icon?: string
+}
+
+export interface FAQ {
+  question: string
+  answer: string
+}
+
+export interface TeamMember {
+  name: string
+  title: string
+  profile: string
+}
+
+export interface TeamData {
+  teams: {
+    name: string
+    executives: TeamMember[]
+  }[]
+}
 

@@ -3,39 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #000F2B;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000F2B;
-    --foreground: #ededed;
-  }
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Montserrat;
-  display: flex;
-}
-
-#root {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.radial-blur {
-  filter: blur(80px);
-  opacity: 0.5;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -43,3 +18,30 @@ body {
     animation-play-state: paused;
   }
 }
+
+@keyframes teamScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2));
+  }
+}
+
+.animate-teamScroll {
+  animation: teamScroll 30s linear infinite;
+}
+
+@keyframes projectScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 4 - 1.5rem * 4));
+  }
+}
+
+.animate-projectScroll {
+  animation: projectScroll 30s linear infinite;
+}
+

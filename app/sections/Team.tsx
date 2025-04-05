@@ -40,7 +40,7 @@ function Team() {
   );
 
   return (
-    <div className="relative max-w-[100vw] flex flex-col items-center justify-center pb-12">
+    <div className="relative max-w-[100vw] flex flex-col items-center justify-center pb-12 my-[20vh]">
       <div className="mb-[6vh] font-normal">Brought to you with 🤍 by the <span className="font-bold">Garuda Hacks</span> team</div>
 
       <div className="flex gap-[2rem] animate-teamScroll w-full hover:pause group">

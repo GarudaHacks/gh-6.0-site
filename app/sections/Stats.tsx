@@ -6,8 +6,8 @@ import { IoTrophyOutline } from "react-icons/io5";
 import { Stat } from '../types/types';
 
 const stats: Stat[] = [
-  { icon: HiOutlineUserGroup, heading: "564", subtitle: "Participants" },
-  { icon: AiOutlineCheckCircle, heading: "105", subtitle: "Project Submissions" },
+  { icon: HiOutlineUserGroup, heading: "6408", subtitle: "Total Participants" },
+  { icon: AiOutlineCheckCircle, heading: "629", subtitle: "Projects Submitted" },
   { icon: IoTrophyOutline, heading: "13", subtitle: "Winning Groups" },
 ];
 

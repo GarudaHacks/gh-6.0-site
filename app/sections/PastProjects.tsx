@@ -45,7 +45,11 @@ function PastProjects() {
   useEffect(() => {
     // Only run the timer if projectsPerPage is determined
     if (projectsPerPage !== null) {
-      const timer = setInterval(nextSlide, 5000);
+      const timer = setInterval(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex >= projects.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 5000);
       return () => clearInterval(timer);
     }
   }, [currentIndex, nextSlide, projectsPerPage]);
@@ -76,6 +80,7 @@ function PastProjects() {
             {/* Navigation Buttons */}
             <button
               type="button"
+              aria-label="Previous Slide"
               onClick={prevSlide}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 text-white hover:text-[#FF0068] transition-colors"
             >
@@ -84,6 +89,7 @@ function PastProjects() {
 
             <button
               type="button"
+              aria-label="Next Slide"
               onClick={nextSlide}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 text-white hover:text-[#FF0068] transition-colors"
             >

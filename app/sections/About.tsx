@@ -19,7 +19,7 @@ function About() {
         <div className="max-w-3xl mx-auto space-y-20">
           <div className="text-center space-y-6">
             <h2 className="text-6xl font-bold text-white">
-              What is <i>Garudahacks</i>?
+              What is <i>Garuda Hacks</i>?
             </h2>
             {/* Tagline */}
             <div className="text-center">

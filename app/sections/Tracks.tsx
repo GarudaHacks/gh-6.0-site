@@ -22,11 +22,11 @@ const Tracks = () => {
           <div className="flex flex-col justify-center space-y-8">
             <div className="space-y-2 text-center md:text-left">
               <h3 className="text-6xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                identity
+                Identity
               </h3>
               <p className="text-xl">through</p>
               <h3 className="text-6xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                innovation
+                Innovation
               </h3>
             </div>
             <div>

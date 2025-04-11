@@ -75,6 +75,12 @@ export default function RootLayout({
             height={700}
             className="absolute top-[270vh] -left-[24rem]"
           />
+          <img
+            src={"assets/curve2.svg"}
+            width={500}
+            height={500}
+            className="absolute top-[390vh] -left-60"
+          />
         </div>
 
         <Navbar />

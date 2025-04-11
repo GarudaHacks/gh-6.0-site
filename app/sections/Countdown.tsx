@@ -44,11 +44,16 @@ const CountdownDisplay = ({
 }) => (
   <div className="flex flex-col items-center">
     <div
-      className="relative bg-primary p-6 md:p-10 sm:p-6 text-white 
+      className="relative bg-primary/20 p-6 md:p-10 sm:p-6 text-white 
       text-6xl md:text-8xl sm:text-2xl font-bold md:w-36 sm:w-16 
-      md:h-40 sm:h-16 flex items-center justify-center rounded-lg shadow-md"
+      md:h-40 sm:h-16 flex items-center justify-center rounded-lg
+      backdrop-blur-sm border border-white/10
+      shadow-[0_0_15px_rgba(255,0,104,0.3)]
+      hover:shadow-[0_0_25px_rgba(255,0,104,0.5)]
+      transition-all duration-200"
     >
       {value}
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-white/5 to-transparent" />
     </div>
     <div className="text-xs md:text-md font-semibold sm:text-sm uppercase mt-2 text-gray-300">
       {label}

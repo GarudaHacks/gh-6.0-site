@@ -29,25 +29,23 @@ function PastProjects() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Memoize navigation functions to stabilize dependencies
   const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
-      prevIndex >= projects.length - 1 ? 0 : prevIndex + 1
+      prevIndex >= projects.length - 3 ? 0 : prevIndex + 1
     );
   }, []);
 
   const prevSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+      prevIndex === 0 ? projects.length - 3 : prevIndex - 1
     );
   }, []);
 
   useEffect(() => {
-    // Only run the timer if projectsPerPage is determined
     if (projectsPerPage !== null) {
       const timer = setInterval(() => {
         setCurrentIndex((prevIndex) =>
-          prevIndex >= projects.length - 1 ? 0 : prevIndex + 1
+          prevIndex >= projects.length - 3 ? 0 : prevIndex + 1
         );
       }, 5000);
       return () => clearInterval(timer);
@@ -63,11 +61,10 @@ function PastProjects() {
     <section id="past-projects" className="w-full my-[30vh]">
       <Container>
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
-          Past Projects
+          <span className="font-serif text-md italic">P</span>ast <span className="font-serif text-md italic">P</span>rojects
         </h2>
 
         <div className="relative">
-          {/* Center container with fixed width */}
           <div
             className="mx-auto"
             style={{
@@ -77,7 +74,6 @@ function PastProjects() {
               maxWidth: "100%",
             }}
           >
-            {/* Navigation Buttons */}
             <button
               type="button"
               aria-label="Previous Slide"
@@ -96,7 +92,6 @@ function PastProjects() {
               <FaChevronRight size={24} />
             </button>
 
-            {/* Projects Container */}
             <div className="overflow-hidden">
               <div
                 className="flex gap-6 transition-transform duration-500"
@@ -120,15 +115,14 @@ function PastProjects() {
               </div>
             </div>
 
-            {/* Page dots */}
             <div className="flex justify-center mt-8 gap-2">
-              {projects.map((_, index) => (
+              {projects.slice(0, -2).map((_, index) => (
                 <button
                   type="button"
                   key={index}
                   className={`w-2 h-2 rounded-full transition-colors ${
                     currentIndex === index
-                      ? "bg-[#FF0068]"
+                      ? "bg-[#fb6da6]"
                       : "bg-white opacity-50"
                   }`}
                   onClick={() => setCurrentIndex(index)}
@@ -142,7 +136,6 @@ function PastProjects() {
   );
 }
 
-// Move ProjectCard outside of the main component
 const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
   <div className="relative h-full overflow-hidden rounded-lg border border-white bg-gradient-to-b from-[rgba(177,177,177,0.20)] to-[rgba(127,127,127,0.60)] backdrop-blur-sm group hover:border-[#FF0068] transition-all duration-300">
     <Image
@@ -153,7 +146,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
       className="w-full h-48 object-cover"
     />
     <div className="p-4">
-      <h3 className="text-xl font-semibold text-white group-hover:text-[#FF0068] transition-colors">
+      <h3 className="text-xl font-semibold text-white transition-colors">
         {project.title}
       </h3>
       <p className="text-gray-300 text-sm mt-2 h-[60px] overflow-hidden">
@@ -163,7 +156,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block mt-4 px-4 py-2 bg-[#FF0068] text-white font-semibold rounded-md hover:bg-opacity-90 transition"
+        className="inline-block mt-4 px-4 py-2 bg-[#FF0068] text-white font-semibold rounded-md hover:opacity-80 transition"
       >
         Learn More
       </a>

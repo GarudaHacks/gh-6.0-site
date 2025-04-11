@@ -1,6 +1,6 @@
 import Container from "./Container"
 import Link from "next/link"
-import { FaTwitter, FaInstagram, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa"
+import { FaInstagram, FaLinkedin, FaFacebook, FaMediumM } from "react-icons/fa"
 
 function Footer() {
   return (
@@ -10,20 +10,17 @@ function Footer() {
           <div className="mb-6 md:mb-0">
             <h3 className="text-2xl font-bold text-white mb-4">Garuda Hacks 6.0</h3>
             <div className="flex space-x-4">
-              <Link href="#" className="text-white hover:text-gray-300">
-                <FaTwitter size={20} />
+              <Link href="https://www.instagram.com/garudahacks" className="text-white hover:text-neutral-300">
+                <FaInstagram size={30} />
               </Link>
-              <Link href="#" className="text-white hover:text-gray-300">
-                <FaInstagram size={20} />
+              <Link href="https://www.linkedin.com/company/garudahacks/?originalSubdomain=id" className="text-white hover:text-neutral-300">
+                <FaLinkedin size={30} />
               </Link>
-              <Link href="#" className="text-white hover:text-gray-300">
-                <FaLinkedin size={20} />
+              <Link href="https://www.facebook.com/GarudaHacks/" className="text-white hover:text-neutral-300">
+                <FaFacebook size={30} />
               </Link>
-              <Link href="#" className="text-white hover:text-gray-300">
-                <FaFacebook size={20} />
-              </Link>
-              <Link href="#" className="text-white hover:text-gray-300">
-                <FaYoutube size={20} />
+              <Link href="https://medium.com/garuda-hq-archives" className="text-white hover:text-neutral-300">
+                <FaMediumM size={30} />
               </Link>
             </div>
           </div>
@@ -59,7 +56,6 @@ function Footer() {
               <h4 className="text-lg font-semibold text-white mb-3">Contact</h4>
               <ul className="space-y-2">
                 <li className="text-gray-300">info@garudahacks.com</li>
-                <li className="text-gray-300">Universitas Multimedia Nusantara</li>
                 <li className="text-gray-300">Tangerang, Indonesia</li>
               </ul>
             </div>

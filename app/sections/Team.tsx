@@ -14,20 +14,18 @@ function bgColorOnTitle(title: string) {
   if (title.includes("Tech & Hack")) {
     return { bg: "bg-sky-800", border: "border-sky-900" };
   } else if (title.includes("Logistics")) {
-    return { bg: "bg-green-600", border: "border-green-700" };
+    return { bg: "bg-indigo-600", border: "border-indigo-700" };
   } else if (title.includes("Marketing")) {
-    return { bg: "bg-yellow-700", border: "border-yellow-800" };
+    return { bg: "bg-purple-700", border: "border-purple-800" };
   } else if (title.includes("Managing Director")) {
-    return { bg: "bg-red-800", border: "border-red-800" };
+    return { bg: "bg-fuchsia-800", border: "border-fuchsia-900" };
   } else if (title.includes("Partnerships")) {
-    return { bg: "bg-purple-600", border: "border-purple-700" };
+    return { bg: "bg-pink-600", border: "border-pink-700" };
   }
 }
 
-// Component to display GH team members' profile pictures, names, and their roles
-// Dynamically scrolls from left to right and pauses upon hover
+// Display GH team members' profile pictures, names, and their roles
 function Team() {
-  // Set state of all team members
   const [hoveredMember, setHoveredMember] = useState<Member | null>(null);
 
   // Flat map to properties
@@ -40,10 +38,13 @@ function Team() {
   );
 
   return (
-    <div className="relative max-w-[100vw] flex flex-col items-center justify-center pb-12 my-[20vh]">
+    <div className="relative max-w-[100vw] flex flex-col items-center justify-center pb-12 my-[15vh]">
       <div className="mb-[6vh] font-normal">
-        Brought to you with 🤍 by the{" "}
-        <span className="font-bold">Garuda Hacks</span> team
+        Brought to you with 🩷 by the{" "}
+        <span className="font-bold font-serif text-md italic">
+          Garuda Hacks
+        </span>{" "}
+        team
       </div>
 
       <div className="flex gap-[2rem] animate-teamScroll w-[200%] hover:pause group">
@@ -62,10 +63,17 @@ function Team() {
       </div>
 
       {hoveredMember && (
-        <div className="absolute top-[12rem] flex flex-col items-center gap-2 rounded-lg text-center p-4 transition-all duration-200">
+        <div className="absolute top-[12rem] flex flex-row items-center gap-4 rounded-lg text-center p-4 transition-all duration-200">
           <div className="font-semibold text-md">{hoveredMember.name}</div>
+          <Image
+            src="/assets/icon/star-four.svg"
+            alt="star"
+            width={16}
+            height={16}
+            className="w-4 h-4"
+          />
           <div
-            className={`text-sm text-neutral-200 max-w-fit rounded-full py-2 px-4 border-[1px] ${
+            className={`text-sm text-neutral-200 max-w-fit font-medium rounded-full py-1 px-2 border-[1px] ${
               bgColorOnTitle(hoveredMember.title)?.bg
             } ${bgColorOnTitle(hoveredMember.title)?.border}`}
           >

@@ -6,17 +6,17 @@ export const tracksData = [
   {
     title: "Sustainability",
     description: "How can we align Indonesia's actions with its identity as a haven of natural resources and diversity? Build tech solutions that tackle environmental challenges.",
-    icon: "/assets/tracks/sustainability.png"
+    icon: "/assets/icon/sustainability.svg"
   },
   {
     title: "Connecting Cultures",
     description: "Indonesia thrives on diversity, yet divisions—geographic, digital, cultural, and social—persist. Through your projects, explore how technology can bridge cultures, empower underrepresented voices, and create inclusive spaces.",
-    icon: "/assets/tracks/cultural-preservation.png"
+    icon: "/assets/icon/culture.svg"
   },
   {
     title: "Education and Equity",
     description: "Indonesia has one of the largest youth populations, yet quality education remains out of reach for many. Rural students often face a lack of trained teachers, learning resources, and even basic infrastructure. Build solutions that make education more accessible, inclusive, and adaptable to all communities.",
-    icon: "/assets/tracks/civic-engagement.png"
+    icon: "/assets/icon/civic-engagement.svg"
   }
 ]
 
@@ -102,5 +102,11 @@ export const projects = [
       "JalanKami is a platform improving urban walkability by providing tools like an interactive map, a forum for reporting infrastructure issues, an area summarizer for insights, and a sidewalk detection tool for gauging accessibility",
     image: "/assets/projects/jalankami.jpg",
     link: "https://devpost.com/software/jalankami",
+  },
+  {
+    title: "IRiS",
+    description: "IRIS is an innovative application designed to provide comprehensive security and user convenience, utilizing the latest advancements in AI",
+    image: "/assets/projects/iris.png",
+    link: "https://devpost.com/software/iris-fprvg9?_gl=1*1cfsuv2*_gcl_au*MTY0MTk2NDAyMi4xNzQyNDQ3NTU2*_ga*MTQzNzAyNDA1LjE3NDI0NDc1NTY.*_ga_0YHJK3Y10M*MTc0NDM1NTg0Ni4yLjEuMTc0NDM1NTg1MC4wLjAuMA..",
   },
 ];

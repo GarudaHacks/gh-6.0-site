@@ -36,7 +36,7 @@ function About() {
               {/* Tagline */}
               <div>
                 <p className="text-3xl font-semibold text-[#ffa7ca]">
-                  Garuda Hacks is Southeast Asia's largest hackathon, with over <span className="font-medium italic font-serif">6000</span> total participants.
+                  Garuda Hacks is Southeast Asia&apos;s largest hackathon, with over <span className="font-medium italic font-serif">6000</span> total participants.
                 </p>
               </div>
               <p className="text-md font-normal text-gray-300 leading-relaxed">

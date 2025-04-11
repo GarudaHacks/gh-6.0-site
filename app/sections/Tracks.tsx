@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { tracksData } from "../data/data";
 import Container from "../components/Container";
 
@@ -23,7 +26,7 @@ const Tracks = () => {
               <h3 className="text-6xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 Identity
               </h3>
-              <p className="text-xl">through</p>
+              <div className="text-xl w-[20vh] flex items-center justify-center translate-y-[8px] italic font-serif">through</div>
               <h3 className="text-6xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 Innovation
               </h3>
@@ -61,8 +64,8 @@ const Tracks = () => {
                 }}
               >
                 <div className="flex items-center gap-4 w-full">
-                  <div className="w-16 h-16 mx-2 rounded-full">
-                    <img
+                  <div className="w-16 h-16 mx-2">
+                    <Image
                       src={track.icon}
                       alt={track.title}
                       width={64}

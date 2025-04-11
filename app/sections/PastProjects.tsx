@@ -92,7 +92,6 @@ function PastProjects() {
               <FaChevronRight size={24} />
             </button>
 
-            {/* Projects Container */}
             <div className="overflow-hidden">
               <div
                 className="flex gap-6 transition-transform duration-500"
@@ -138,7 +137,7 @@ function PastProjects() {
 }
 
 const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
-  <div className="relative h-full overflow-hidden rounded-lg border border-white bg-gradient-to-b from-[rgba(177,177,177,0.20)] to-[rgba(127,127,127,0.60)] backdrop-blur-sm group hover:border-[#faabc9] transition-all duration-300">
+  <div className="relative h-full overflow-hidden rounded-lg border border-white bg-gradient-to-b from-[rgba(177,177,177,0.20)] to-[rgba(127,127,127,0.60)] backdrop-blur-sm group hover:border-[#FF0068] transition-all duration-300">
     <Image
       src={project.image || "/placeholder.svg"}
       alt={project.title}
@@ -147,7 +146,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
       className="w-full h-48 object-cover"
     />
     <div className="p-4">
-      <h3 className="text-xl font-semibold text-white group-hover:text-[#faabc9] transition-colors">
+      <h3 className="text-xl font-semibold text-white transition-colors">
         {project.title}
       </h3>
       <p className="text-gray-300 text-sm mt-2 h-[60px] overflow-hidden">
@@ -157,7 +156,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block mt-4 px-4 py-2 bg-[#FF0068] text-white font-semibold rounded-md hover:bg-opacity-80 transition"
+        className="inline-block mt-4 px-4 py-2 bg-[#FF0068] text-white font-semibold rounded-md hover:opacity-80 transition"
       >
         Learn More
       </a>

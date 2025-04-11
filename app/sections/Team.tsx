@@ -41,7 +41,10 @@ function Team() {
     <div className="relative max-w-[100vw] flex flex-col items-center justify-center pb-12 my-[15vh]">
       <div className="mb-[6vh] font-normal">
         Brought to you with 🩷 by the{" "}
-        <span className="font-bold font-serif text-md italic">Garuda Hacks</span> team
+        <span className="font-bold font-serif text-md italic">
+          Garuda Hacks
+        </span>{" "}
+        team
       </div>
 
       <div className="flex gap-[2rem] animate-teamScroll w-[200%] hover:pause group">
@@ -62,7 +65,13 @@ function Team() {
       {hoveredMember && (
         <div className="absolute top-[12rem] flex flex-row items-center gap-4 rounded-lg text-center p-4 transition-all duration-200">
           <div className="font-semibold text-md">{hoveredMember.name}</div>
-          <img src="/assets/icon/star-four.svg" alt="star" className="w-4 h-4" />
+          <Image
+            src="/assets/icon/star-four.svg"
+            alt="star"
+            width={16}
+            height={16}
+            className="w-4 h-4"
+          />
           <div
             className={`text-sm text-neutral-200 max-w-fit font-medium rounded-full py-1 px-2 border-[1px] ${
               bgColorOnTitle(hoveredMember.title)?.bg

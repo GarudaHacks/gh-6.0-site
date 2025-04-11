@@ -58,7 +58,7 @@ function PastProjects() {
   }
 
   return (
-    <section id="past-projects" className="w-full my-[30vh]">
+    <section id="projects" className="w-full my-[30vh]">
       <Container>
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
           <span className="font-serif text-md italic">P</span>ast <span className="font-serif text-md italic">P</span>rojects

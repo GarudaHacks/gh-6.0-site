@@ -73,7 +73,7 @@ function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 transition-all duration-200">
             <Link
-              href="#home"
+              href="/"
               onClick={(e) => handleScrollToSection(e, "home")}
               className="text-white hover:text-[#FF0068] transition"
             >
@@ -85,6 +85,13 @@ function Navbar() {
               className="text-white hover:text-[#FF0068] transition"
             >
               About
+            </Link>
+            <Link
+              href="#projects"
+              onClick={(e) => handleScrollToSection(e, "projects")}
+              className="text-white hover:text-[#FF0068] transition"
+            >
+              Projects
             </Link>
             <Link
               href="#tracks"

@@ -82,7 +82,7 @@ function Stats() {
   return (
     <section id="stats" className="py-20">
       <Container>
-        <h2 className="text-3xl font-semibold text-white mb-8 text-center">Garudahacks by the <span className="font-serif text-md italic">numbers</span></h2>
+        <h2 className="text-3xl font-semibold text-white mb-8 text-center">Garuda Hacks by the <span className="font-serif text-md italic">numbers</span></h2>
         <div
           ref={statsRef}
           className="flex flex-row items-center justify-center gap-8"

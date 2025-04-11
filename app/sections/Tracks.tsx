@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { tracksData } from "../data/data";
@@ -12,9 +10,10 @@ const theme =
 
 const Tracks = () => {
   return (
-    <Container>
-      <div className="flex flex-col items-center py-10 px-5 mb-[10vh]">
-        <div className="grid md:grid-cols-2 gap-12 w-full max-w-6xl">
+    <section id="tracks">
+      <Container>
+        <div className="flex flex-col items-center py-10 px-5 mb-[10vh]">
+          <div className="grid md:grid-cols-2 gap-12 w-full max-w-6xl">
           <motion.div
             className="flex flex-col justify-center space-y-8"
             initial={{ opacity: 0, x: -50 }}
@@ -26,7 +25,7 @@ const Tracks = () => {
               <h3 className="text-6xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 Identity
               </h3>
-              <div className="text-xl w-[20vh] flex items-center justify-center translate-y-[8px] italic font-serif">through</div>
+              <div className="text-xl w-[20vh] flex items-center justify-center translate-y-[9px] italic font-serif">through</div>
               <h3 className="text-6xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
                 Innovation
               </h3>
@@ -87,6 +86,7 @@ const Tracks = () => {
         </div>
       </div>
     </Container>
+    </section>
   );
 };
 

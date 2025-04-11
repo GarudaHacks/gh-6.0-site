@@ -14,15 +14,32 @@ function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
+  const handleScrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = window.innerHeight * 0.18;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 60) {
-        // Scrolling down
         setIsVisible(false);
       } else {
-        // Scrolling up
         setIsVisible(true);
       }
 
@@ -56,24 +73,27 @@ function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 transition-all duration-200">
             <Link
-              href="/"
+              href="#home"
+              onClick={(e) => handleScrollToSection(e, "home")}
               className="text-white hover:text-[#FF0068] transition"
             >
               Home
             </Link>
             <Link
               href="#about"
+              onClick={(e) => handleScrollToSection(e, "about")}
               className="text-white hover:text-[#FF0068] transition"
             >
               About
             </Link>
             <Link
               href="#tracks"
+              onClick={(e) => handleScrollToSection(e, "tracks")}
               className="text-white hover:text-[#FF0068] transition"
             >
               Tracks
             </Link>
-            <Link
+            {/* <Link
               href="#judges"
               className="text-white hover:text-[#FF0068] transition"
             >
@@ -84,9 +104,11 @@ function Navbar() {
               className="text-white hover:text-[#FF0068] transition"
             >
               Sponsors
-            </Link>
+            </Link> */}
+            {/* TODO: Add judges and sponsors once confirmed */}
             <Link
               href="#faq"
+              onClick={(e) => handleScrollToSection(e, "faq")}
               className="text-white hover:text-[#FF0068] transition"
             >
               FAQ
@@ -95,7 +117,7 @@ function Navbar() {
               href="https://2024.garudahacks.com/"
               className="text-white hover:text-[#FF0068] transition"
             >
-              Past Events
+              2024
             </Link>
           </nav>
 
@@ -128,23 +150,26 @@ function Navbar() {
             <nav className="flex flex-col space-y-4">
               <Link
                 href="/"
+                onClick={(e) => handleScrollToSection(e, "home")}
                 className="text-white hover:text-[#FF0068] transition"
               >
                 Home
               </Link>
               <Link
                 href="#about"
+                onClick={(e) => handleScrollToSection(e, "about")}
                 className="text-white hover:text-[#FF0068] transition"
               >
                 About
               </Link>
               <Link
                 href="#tracks"
+                onClick={(e) => handleScrollToSection(e, "tracks")}
                 className="text-white hover:text-[#FF0068] transition"
               >
                 Tracks
               </Link>
-              <Link
+              {/* <Link
                 href="#judges"
                 className="text-white hover:text-[#FF0068] transition"
               >
@@ -155,9 +180,10 @@ function Navbar() {
                 className="text-white hover:text-[#FF0068] transition"
               >
                 Sponsors
-              </Link>
+              </Link> */}
               <Link
                 href="#faq"
+                onClick={(e) => handleScrollToSection(e, "faq")}
                 className="text-white hover:text-[#FF0068] transition"
               >
                 FAQ
@@ -166,7 +192,7 @@ function Navbar() {
                 href="https://2024.garudahacks.com/"
                 className="text-white hover:text-[#FF0068] transition"
               >
-                Past Events
+                2024
               </Link>
               <button className="px-6 py-2 bg-[#FF0068] text-white font-semibold rounded-md hover:bg-opacity-90 transition w-full">
                 {APPLICATIONS_OPEN ? "Apply Now" : "Coming Soon"}

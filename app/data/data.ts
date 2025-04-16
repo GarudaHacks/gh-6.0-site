@@ -113,7 +113,7 @@ export const projects = [
     title: "JalanKami",
     description:
       "JalanKami is a platform improving urban walkability by providing tools like an interactive map, a forum for reporting infrastructure issues, an area summarizer for insights, and a sidewalk detection tool for gauging accessibility",
-    image: "/assets/projects/jalankami.jpg",
+    image: "/assets/projects/jalankami.webp",
     link: "https://devpost.com/software/jalankami",
   },
   {

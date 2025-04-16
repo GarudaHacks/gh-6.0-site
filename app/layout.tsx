@@ -1,18 +1,15 @@
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+"use client";
+
 import "./globals.css";
+import { Montserrat } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-  title: "Garuda Hacks 6.0",
-  description: "Landing page for GH 6.0",
-};
 
 export default function RootLayout({
   children,
@@ -51,31 +48,31 @@ export default function RootLayout({
           <div className="absolute top-[320vh] -right-[20vw] w-[90vh] h-[90vh] rounded-full bg-gradient-radial from-primary/25 to-transparent blur-3xl" />
 
           {/* Keep existing curve images */}
-          <img
+          <LazyLoadImage
             src={"assets/curve1.svg"}
             width={500}
             height={500}
             className="absolute top-[50vh] right-0"
           />
-          <img
+          <LazyLoadImage
             src={"assets/curve2.svg"}
             width={500}
             height={500}
             className="absolute top-[100vh] -left-60"
           />
-          <img
+          <LazyLoadImage
             src={"assets/curve3.svg"}
             width={800}
             height={800}
             className="absolute top-[220vh] -right-[25rem]"
           />
-          <img
+          <LazyLoadImage
             src={"assets/curve3.svg"}
             width={700}
             height={700}
             className="absolute top-[270vh] -left-[24rem]"
           />
-          <img
+          <LazyLoadImage
             src={"assets/curve2.svg"}
             width={500}
             height={500}

@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Container from "../components/Container";
-import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { projects } from "../data/data";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function PastProjects() {
   const [projectsPerPage, setProjectsPerPage] = useState<number | null>(null);
@@ -138,7 +138,7 @@ function PastProjects() {
 
 const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
   <div className="relative h-full overflow-hidden rounded-lg border border-white bg-gradient-to-b from-[rgba(177,177,177,0.20)] to-[rgba(127,127,127,0.60)] backdrop-blur-sm group hover:border-[#FF0068] transition-all duration-300">
-    <Image
+    <LazyLoadImage
       src={project.image || "/placeholder.svg"}
       alt={project.title}
       width={350}

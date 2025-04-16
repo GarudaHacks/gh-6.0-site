@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Container from "./Container";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const APPLICATIONS_OPEN = false; // Set to true when applications are open
 
@@ -62,7 +62,7 @@ function Navbar() {
       <Container className="max-w-full px-8">
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="flex items-center">
-            <Image
+            <LazyLoadImage
               src="/images/logo/ghq.png"
               alt="Garuda Hacks logo"
               width={25}

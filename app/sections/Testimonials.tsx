@@ -1,17 +1,19 @@
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
-import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
-import { testimonialsData } from '@/app/data/testimonials';
-import { memo } from 'react';
+import { useState, useMemo } from "react";
+import Image from "next/image";
+import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { testimonialsData } from "@/app/data/testimonials";
+import { memo } from "react";
 
 const Testimonials = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [showFirstSet, setShowFirstSet] = useState(true);
 
-  const firstSet = testimonialsData.slice(0, 3);
-  const secondSet = testimonialsData.slice(3, 6);
+  const midIndex = Math.ceil(testimonialsData.length / 2);
+  const firstSet = testimonialsData.slice(0, midIndex);
+  const secondSet = testimonialsData.slice(midIndex);
 
   const toggleTestimonials = () => {
     setShowFirstSet((prev) => !prev);
@@ -33,48 +35,63 @@ const Testimonials = () => {
           whileHover={{ scale: 1.3 }}
           whileTap={{ scale: 0.9 }}
         >
-          <FaChevronLeft size={35} style={{ color: '#FF0068' }} />
+          <FaChevronLeft size={35} style={{ color: "#FF0068" }} />
         </motion.button>
 
         {/* Testimonials Container */}
         <div className="w-full overflow-hidden relative flex justify-center">
           <AnimatePresence mode="wait">
             <motion.div
-              key={showFirstSet ? 'firstSet' : 'secondSet'}
+              key={showFirstSet ? "firstSet" : "secondSet"}
               className="flex gap-6 justify-center w-full"
-              initial={{ x: showFirstSet ? '100%' : '-100%' }}
-              animate={{ x: '0%' }}
-              exit={{ x: showFirstSet ? '-100%' : '100%' }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              initial={{ x: showFirstSet ? "100%" : "-100%" }}
+              animate={{ x: "0%" }}
+              exit={{ x: showFirstSet ? "-100%" : "100%" }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              {(showFirstSet ? firstSet : secondSet).map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.name + index}
-                  className="relative flex flex-col p-6 text-white cursor-pointer overflow-hidden"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, ease: 'easeOut' }}
-                  style={{
-                    display: 'flex',
-                    width: '374px',
-                    height: '256px',
-                    padding: '24px',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    gap: '12px',
-                    borderRadius: '15px',
-                    border: '1px solid #FFF',
-                    background: 'linear-gradient(180deg, rgba(177, 177, 177, 0.20) 0%, rgba(127, 127, 127, 0.60) 100%)',
-                    backdropFilter: 'blur(2px)',
-                  }}
-                  onClick={() => setExpandedIndex(index + (showFirstSet ? 0 : 3))}
-                >
-                  <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full mb-2" />
-                  <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
-                  <span className="text-sm text-red-400">{testimonial.role}</span>
-                  <p className="text-sm text-gray-200 mt-1">{testimonial.quote}</p>
-                </motion.div>
-              ))}
+              {(showFirstSet ? firstSet : secondSet).map(
+                (testimonial, index) => (
+                  <motion.div
+                    key={testimonial.name + index}
+                    className="relative flex flex-col p-6 text-white cursor-pointer overflow-hidden"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    style={{
+                      display: "flex",
+                      width: "374px",
+                      height: "256px",
+                      padding: "24px",
+                      flexDirection: "column",
+                      alignItems: "flex-start",
+                      gap: "12px",
+                      borderRadius: "15px",
+                      border: "1px solid #FFF",
+                      background:
+                        "linear-gradient(180deg, rgba(177, 177, 177, 0.20) 0%, rgba(127, 127, 127, 0.60) 100%)",
+                      backdropFilter: "blur(2px)",
+                    }}
+                    onClick={() =>
+                      setExpandedIndex(index + (showFirstSet ? 0 : 3))
+                    }
+                  >
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full mb-2"
+                    />
+                    <h3 className="text-lg font-semibold text-white">
+                      {testimonial.name}
+                    </h3>
+                    <span className="text-sm text-red-400">
+                      {testimonial.role}
+                    </span>
+                    <p className="text-sm text-gray-200 mt-1">
+                      {testimonial.quote}
+                    </p>
+                  </motion.div>
+                )
+              )}
             </motion.div>
           </AnimatePresence>
         </div>
@@ -86,7 +103,7 @@ const Testimonials = () => {
           whileHover={{ scale: 1.3 }}
           whileTap={{ scale: 0.9 }}
         >
-          <FaChevronRight size={35} style={{ color: '#FF0068' }} />
+          <FaChevronRight size={35} style={{ color: "#FF0068" }} />
         </motion.button>
       </div>
 
@@ -104,13 +121,14 @@ const Testimonials = () => {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
               style={{
-                width: '600px',
-                height: '400px',
-                border: '1px solid #FFF',
-                background: 'linear-gradient(180deg, rgba(177, 177, 177, 0.20) 0%, rgba(127, 127, 127, 0.60) 100%)',
-                backdropFilter: 'blur(2px)',
+                width: "600px",
+                height: "400px",
+                border: "1px solid #FFF",
+                background:
+                  "linear-gradient(180deg, rgba(177, 177, 177, 0.20) 0%, rgba(127, 127, 127, 0.60) 100%)",
+                backdropFilter: "blur(2px)",
               }}
               onClick={(e) => e.stopPropagation()}
             >
@@ -118,12 +136,22 @@ const Testimonials = () => {
                 className="absolute top-4 right-4"
                 onClick={() => setExpandedIndex(null)}
               >
-                <FaTimes size={24} style={{ color: '#FF0068' }} />
+                <FaTimes size={24} style={{ color: "#FF0068" }} />
               </button>
-              <img src={expandedTestimonial.image} alt={expandedTestimonial.name} className="w-20 h-20 rounded-full mb-4" />
-              <h3 className="text-xl font-semibold text-white">{expandedTestimonial.name}</h3>
-              <span className="text-md text-red-400">{expandedTestimonial.role}</span>
-              <p className="text-md text-gray-200 w-10/12 mt-4">{expandedTestimonial.quote}</p>
+              <Image
+                src={expandedTestimonial.image}
+                alt={expandedTestimonial.name}
+                className="w-20 h-20 rounded-full mb-4"
+              />
+              <h3 className="text-xl font-semibold text-white">
+                {expandedTestimonial.name}
+              </h3>
+              <span className="text-md text-red-400">
+                {expandedTestimonial.role}
+              </span>
+              <p className="text-md text-gray-200 w-10/12 mt-4">
+                {expandedTestimonial.quote}
+              </p>
             </motion.div>
           </motion.div>
         )}

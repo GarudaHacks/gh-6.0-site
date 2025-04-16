@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import teamData from "../data/team.json";
-import Image from "next/image";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 type Member = {
@@ -66,7 +65,7 @@ function Team() {
       {hoveredMember && (
         <div className="absolute top-[12rem] flex flex-row items-center gap-4 rounded-lg text-center p-4 transition-all duration-200">
           <div className="font-semibold text-md">{hoveredMember.name}</div>
-          <Image
+          <LazyLoadImage
             src="/assets/icon/star-four.svg"
             alt="star"
             width={16}

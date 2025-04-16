@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { tracksData } from "../data/data";
 import Container from "../components/Container";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const theme =
   "Garuda Hacks 6.0 challenges participants to build solutions that bring Indonesia's ideals closer to its lived reality. Whether through sustainability, cultural preservation, or civic engagement, this hackathon is about transforming narratives into tangible impact.";
@@ -64,7 +64,7 @@ const Tracks = () => {
               >
                 <div className="flex items-center gap-4 w-full">
                   <div className="w-16 h-16 mx-2">
-                    <Image
+                    <LazyLoadImage
                       src={track.icon}
                       alt={track.title}
                       width={64}

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import teamData from "../data/team.json";
 import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 type Member = {
   name: string;
@@ -49,7 +50,7 @@ function Team() {
 
       <div className="flex gap-[2rem] animate-teamScroll w-[200%] hover:pause group">
         {[...allMembers, ...allMembers].map((member, index) => (
-          <Image
+          <LazyLoadImage
             src={`/profiles/${member.profile}`}
             alt={member.name}
             width={100}

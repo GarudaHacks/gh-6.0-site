@@ -47,14 +47,15 @@ function Hero() {
             <div className="text-3xl font-semibold max-w-[80%]">
               Be part of Indonesia&apos;s largest{" "}
               <span className="font-serif text-md italic">
-                hackathon{" "}
+                hackath
                 <Image
                   src="/assets/gear.png"
                   alt="gear"
-                  width={28}
-                  height={28}
+                  width={24}
+                  height={24}
                   className="inline-block"
                 />
+                n
               </span>
             </div>
             <div className="flex sm:flex-col md:flex-row gap-3">

@@ -83,9 +83,9 @@ function Countdown({ targetDate }: CountdownProps) {
   }, [targetDate]);
 
   return (
-    <div className="flex flex-col items-center justify-center text-white py-8 px-4 min-h-[70vh]">
+    <div className="flex flex-col items-center justify-center text-white py-8 px-4 min-h-screen md:min-h-[70vh] -translate-x-8 md:translate-x-0">
       {/* Countdown Timer */}
-      <div className="flex space-x-6 md:space-x-6 sm:space-x-1 mt-4">
+      <div className="grid grid-cols-2 gap-4 md:flex md:gap-6">
         {Object.entries(timeLeft).map(([label, value], index) => (
           <CountdownDisplay
             key={index}
@@ -96,7 +96,7 @@ function Countdown({ targetDate }: CountdownProps) {
       </div>
 
       {/* Caption */}
-      <p className="mt-4 text-base md:text-2xl sm:text-sm font-semibold text-gray-200 text-center">
+      <p className="mt-6 text-2xl md:text-3xl sm:text-sm font-semibold text-gray-200 text-center">
         until registrations open
       </p>
     </div>

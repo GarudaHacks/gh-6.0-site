@@ -5,7 +5,6 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 import Container from "../components/Container";
 import { motion } from "framer-motion";
 
-// Split FAQ data into two categories
 const generalFAQs = faqData.filter((faq) => faq.category === "general");
 const logisticsFAQs = faqData.filter((faq) => faq.category === "logistics");
 
@@ -75,7 +74,7 @@ const FAQColumn = ({
 
 const FAQ = () => {
   return (
-    <section id="faq" className="min-h-[80vh] py-auto flex items-center">
+    <section id="faq" className="max-w-[85vw] min-h-[100vh] md:min-h-[80vh] py-auto flex items-center">
       <Container>
         <motion.h2
           className="text-center text-3xl font-semibold mb-12 text-white"
@@ -89,7 +88,7 @@ const FAQ = () => {
           sked <span className="font-serif font-bold italic">Q</span>
           uestions
         </motion.h2>
-        <div className="flex flex-col md:flex-row gap-8 w-full max-w-[1200px]">
+        <div className="flex flex-col md:flex-row gap-8 space-y-8 md:space-y-0 w-full max-w-[1200px]">
           <FAQColumn faqs={generalFAQs} title="General" />
           <FAQColumn faqs={logisticsFAQs} title="Logistics" />
         </div>

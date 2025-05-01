@@ -12,14 +12,14 @@ const content = {
 // Garuda Hacks' core mission and values
 function About() {
   return (
-    <section id="about" className="min-h-[70vh] py-20">
+    <section id="about" className="min-h-[70vh] py-20 -translate-x-8 md:translate-x-0">
       <Container>
-        <div className="flex flex-row items-center justify-center">
+        <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="min-w-1/2">
             <motion.img
               src="/assets/garudie.png"
               alt="Garuda Hacks Logo"
-              className="w-[16vw] object-cover"
+              className="w-[25vw] md:w-[16vw] object-cover"
               animate={{
                 y: [0, -30, 0],
               }}
@@ -35,11 +35,11 @@ function About() {
             <div className="text-left space-y-6">
               {/* Tagline */}
               <div>
-                <p className="text-3xl font-semibold text-[#ffa7ca]">
+                <p className="text-lg md:text-3xl font-semibold text-[#ffa7ca]">
                   Garuda Hacks is Southeast Asia&apos;s largest hackathon, with over <span className="font-medium italic font-serif">6000</span> total participants.
                 </p>
               </div>
-              <p className="text-md font-normal text-gray-300 leading-relaxed">
+              <p className="text-sm md:text-md font-normal text-gray-300 leading-relaxed">
                 {content.description}
               </p>
             </div>

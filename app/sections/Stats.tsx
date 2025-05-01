@@ -80,12 +80,12 @@ function Stats() {
   }, [hasScrolled]);
 
   return (
-    <section id="stats" className="py-20">
+    <section id="stats" className="py-20 -translate-x-8 md:translate-x-0">
       <Container>
-        <h2 className="text-3xl font-semibold text-white mb-8 text-center">Garuda Hacks by the <span className="font-serif text-md italic">numbers</span></h2>
+        <h2 className="text-2xl md:text-3xl font-semibold text-white mb-8 text-center">Garuda Hacks by the <span className="text-md font-semibold italic">numbers</span></h2>
         <div
           ref={statsRef}
-          className="flex flex-row items-center justify-center gap-8"
+          className="flex flex-col md:flex-row items-center justify-center gap-8"
         >
           {stats.map((stat, index) => (
             <motion.div

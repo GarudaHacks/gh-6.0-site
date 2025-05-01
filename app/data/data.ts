@@ -27,15 +27,13 @@ export const tracksData = [
 export const faqData = [
   {
     question: "What is a hackathon?",
-    answer:
-      "A hackathon is a 36-hour event where participants come together to build innovative solutions to real-world problems. Think of it as an invention marathon where you can turn your ideas into reality through technology.",
-    category: "general",
+    answer: "A hackathon is a 36-hour event where participants come together to build innovative solutions to real-world problems.",
+    category: "general"
   },
   {
     question: "Who can participate?",
-    answer:
-      "Any student enrolled in a university or high school can participate. Whether you're studying computer science, design, business, or any other field - everyone is welcome! You must be at least 16 years old to participate.",
-    category: "general",
+    answer: "Any student studying in a university, high school, or considered as new grad (within one month of graduation) can participate. Whether you're studying computer science, design, business, or any other field - everyone is welcome! You must be at least 14 years old to participate.",
+    category: "general"
   },
   {
     question: "What if I've never coded before?",
@@ -63,15 +61,13 @@ export const faqData = [
   },
   {
     question: "Do you offer travel reimbursements?",
-    answer:
-      "Yes! We offer travel reimbursements for participants coming from outside the Greater Jakarta area. The reimbursement amount varies based on your location. Details about reimbursement caps and requirements will be sent to accepted participants.",
-    category: "logistics",
+    answer: "No. Unfortunately, due to participant constraints we will not be offering travel reimbursements this year.",
+    category: "logistics"
   },
   {
     question: "Where can I stay overnight?",
-    answer:
-      "The event venue at Universitas Multimedia Nusantara will be open 24/7 during the hackathon. We provide designated resting areas with air mattresses and basic amenities. For participants who prefer hotels, we have partnerships with nearby hotels offering special rates.",
-    category: "logistics",
+    answer: "The event venue at Universitas Multimedia Nusantara will be open 24/7 during the hackathon. We provide designated resting areas with air mattresses and basic amenities. There are also several hotels nearby for participants who prefer to stay overnight nearby.",
+    category: "logistics"
   },
   {
     question: "What should I bring?",
@@ -81,10 +77,9 @@ export const faqData = [
   },
   {
     question: "Will there be prizes?",
-    answer:
-      "Yes! We have a total prize pool worth over Rp 50,000,000, including cash prizes, sponsor awards, and special category prizes. Specific prize details will be announced closer to the event.",
-    category: "general",
-  },
+    answer: "Yes! We have a total prize pool worth over Rp 8,000,000, including cash prizes, sponsor awards, and special category prizes. Specific prize details will be announced closer to the event.",
+    category: "general"
+  }
 ];
 
 export const projects = [

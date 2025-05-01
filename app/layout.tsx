@@ -52,13 +52,13 @@ export default function RootLayout({
             src={"assets/curve1.svg"}
             width={500}
             height={500}
-            className="absolute top-[50vh] right-0"
+            className="absolute top-[65vh] scale-75 md:scale-0 md:top-[50vh] -right-20 md:right-0"
           />
           <LazyLoadImage
             src={"assets/curve2.svg"}
             width={500}
             height={500}
-            className="absolute top-[100vh] -left-60"
+            className="absolute top-[100vh] scale-75 md:scale-0 md:top-[100vh] -left-60 md:left-0"
           />
           <LazyLoadImage
             src={"assets/curve3.svg"}
@@ -76,7 +76,7 @@ export default function RootLayout({
             src={"assets/curve2.svg"}
             width={500}
             height={500}
-            className="absolute top-[390vh] -left-60"
+            className="absolute top-[360vh] md:scale-0 md:top-[390vh] -left-60 md:left-0"
           />
         </div>
 

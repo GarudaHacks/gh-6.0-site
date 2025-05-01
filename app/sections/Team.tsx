@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import teamData from "../data/team.json";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
@@ -27,6 +27,15 @@ function bgColorOnTitle(title: string) {
 // Display GH team members' profile pictures, names, and their roles
 function Team() {
   const [hoveredMember, setHoveredMember] = useState<Member | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Flat map to properties
   const allMembers: Member[] = teamData.teams.flatMap((team) =>
@@ -38,7 +47,7 @@ function Team() {
   );
 
   return (
-    <div className="relative max-w-[100vw] flex flex-col items-center justify-center pb-12 my-[15vh]">
+    <div className="relative max-w-[100vw] flex flex-col items-center justify-center md:pb-12 my-[15vh] -translate-x-8 md:translate-x-0">
       <div className="mb-[6vh] font-normal">
         Brought to you with 🩷 by the{" "}
         <span className="font-bold font-serif text-md italic">
@@ -47,13 +56,13 @@ function Team() {
         team
       </div>
 
-      <div className="flex gap-[2rem] animate-teamScroll w-[200%] hover:pause group">
+      <div className="flex gap-[1rem] md:gap-[2rem] animate-teamScroll w-[200%] hover:pause group">
         {[...allMembers, ...allMembers].map((member, index) => (
           <LazyLoadImage
             src={`/profiles/${member.profile}`}
             alt={member.name}
-            width={100}
-            height={100}
+            width={isMobile ? 75 : 100}
+            height={isMobile ? 75 : 100}
             key={index}
             className="!aspect-square object-cover rounded-lg cursor-pointer hover:border-white hover:border-[2px] hover:!opacity-100 group-hover:opacity-50"
             onMouseEnter={() => setHoveredMember(member)}
@@ -63,7 +72,7 @@ function Team() {
       </div>
 
       {hoveredMember && (
-        <div className="absolute top-[12rem] flex flex-row items-center gap-4 rounded-lg text-center p-4 transition-all duration-200">
+        <div className="absolute top-[12rem] flex flex-col md:flex-row items-center gap-4 rounded-lg text-center p-4 transition-all duration-200">
           <div className="font-semibold text-md">{hoveredMember.name}</div>
           <LazyLoadImage
             src="/assets/icon/star-four.svg"

@@ -1,5 +1,7 @@
-import Container from "../components/Container"
-import Image from "next/image"
+"use client";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import Container from "../components/Container";
 
 function Recap() {
   const thumbnails = [
@@ -7,17 +9,19 @@ function Recap() {
     "/placeholder.svg?height=100&width=150",
     "/placeholder.svg?height=100&width=150",
     "/placeholder.svg?height=100&width=150",
-  ]
+  ];
 
   return (
     <section id="recap" className="w-full py-16">
       <Container>
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">Garuda Hacks 5.0 Recap</h2>
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          Garuda Hacks 5.0 Recap
+        </h2>
 
         <div className="flex flex-col gap-6">
           {/* Main Video */}
           <div className="w-full rounded-lg overflow-hidden border border-white">
-            <Image
+            <LazyLoadImage
               src="/placeholder.svg?height=500&width=1000"
               alt="Garuda Hacks 5.0 Recap"
               width={1000}
@@ -33,7 +37,7 @@ function Recap() {
                 key={index}
                 className="rounded-lg overflow-hidden border border-white cursor-pointer hover:border-[#FF0068] transition"
               >
-                <Image
+                <LazyLoadImage
                   src={thumbnail || "/placeholder.svg"}
                   alt={`Thumbnail ${index + 1}`}
                   width={150}
@@ -46,8 +50,7 @@ function Recap() {
         </div>
       </Container>
     </section>
-  )
+  );
 }
 
-export default Recap
-
+export default Recap;

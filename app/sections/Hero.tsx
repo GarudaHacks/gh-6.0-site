@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
-import Image from "next/image";
 import Container from "../components/Container";
 import ApplyButton from "../components/ApplyButton";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Hero() {
   return (
@@ -11,14 +13,14 @@ function Hero() {
           <div className="flex flex-col gap-y-2 md:gap-y-4 items-start text-left max-w-[90%] md:pl-12">
             <div className="relative h-fit flex justify-start items-start">
               <div className="relative h-fit flex justify-start items-start">
-                <Image
+                <LazyLoadImage
                   src="/assets/hero_text.svg"
                   alt="Garuda Hacks 6.0"
                   width={500}
                   height={300}
                   className="min-h-[12rem] -translate-x-16 scale-75 md:scale-90 md:-translate-x-6"
                 />
-                <Image
+                <LazyLoadImage
                   src="/assets/hero_label.svg"
                   alt="6.0 label"
                   width={128}
@@ -30,7 +32,7 @@ function Hero() {
             <div className="flex flex-col gap-y-2"></div>
             <div className="text-primary sm:text-2xl md:text-3xl font-semibold">
               July 24 - 26{" "}
-              <Image
+              <LazyLoadImage
                 src="/assets/icon/star-four-alt.svg"
                 alt="star"
                 width={16}
@@ -49,8 +51,8 @@ function Hero() {
               Be part of Indonesia&apos;s largest{" "}
               <span className="font-serif block md:inline-block text-md italic">
                 hackath
-                <Image
-                  src="/assets/gear.png"
+                <LazyLoadImage
+                src="/assets/gear.png"
                   alt="gear"
                   width={24}
                   height={24}

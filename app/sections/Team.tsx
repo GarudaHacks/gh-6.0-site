@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import teamData from "../data/team.json";
-import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 type Member = {
   name: string;
@@ -58,7 +58,7 @@ function Team() {
 
       <div className="flex gap-[1rem] md:gap-[2rem] animate-teamScroll w-[200%] hover:pause group">
         {[...allMembers, ...allMembers].map((member, index) => (
-          <Image
+          <LazyLoadImage
             src={`/profiles/${member.profile}`}
             alt={member.name}
             width={isMobile ? 75 : 100}
@@ -74,7 +74,7 @@ function Team() {
       {hoveredMember && (
         <div className="absolute top-[12rem] flex flex-col md:flex-row items-center gap-4 rounded-lg text-center p-4 transition-all duration-200">
           <div className="font-semibold text-md">{hoveredMember.name}</div>
-          <Image
+          <LazyLoadImage
             src="/assets/icon/star-four.svg"
             alt="star"
             width={16}

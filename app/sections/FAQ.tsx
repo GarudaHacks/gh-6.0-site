@@ -5,7 +5,6 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 import Container from "../components/Container";
 import { motion } from "framer-motion";
 
-// Split FAQ data into two categories
 const generalFAQs = faqData.filter((faq) => faq.category === "general");
 const logisticsFAQs = faqData.filter((faq) => faq.category === "logistics");
 

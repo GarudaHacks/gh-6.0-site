@@ -83,7 +83,7 @@ function Countdown({ targetDate }: CountdownProps) {
   }, [targetDate]);
 
   return (
-    <div className="flex flex-col items-center justify-center text-white py-8 px-4 min-h-screen md:min-h-[70vh] -translate-x-8 md:translate-x-0">
+    <div className="flex flex-col items-center justify-center text-white py-8 px-4 min-h-screen md:min-h-[70vh]">
       {/* Countdown Timer */}
       <div className="grid grid-cols-2 gap-4 md:flex md:gap-6">
         {Object.entries(timeLeft).map(([label, value], index) => (

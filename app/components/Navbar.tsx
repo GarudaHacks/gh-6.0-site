@@ -153,8 +153,8 @@ function Navbar() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-black bg-opacity-95 fixed top-[72px] left-0 right-0 p-4">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden bg-transparent backdrop-blur-lg bg-opacity-95 fixed top-[72px] left-0 right-0 p-4 px-8">
+            <nav className="flex flex-col space-y-8 text-lg">
               <Link
                 href="/"
                 onClick={(e) => handleScrollToSection(e, "home")}

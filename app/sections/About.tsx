@@ -12,7 +12,7 @@ const content = {
 // Garuda Hacks' core mission and values
 function About() {
   return (
-    <section id="about" className="min-h-[70vh] py-20 -translate-x-8 md:translate-x-0">
+    <section id="about" className="min-h-[70vh] py-20">
       <Container>
         <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="min-w-1/2">

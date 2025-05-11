@@ -9,7 +9,7 @@ function Hero() {
   return (
     <section id="hero">
       <Container>
-        <div className="grid min-h-[80vh] sm:grid-rows-2 md:grid-rows-1 md:grid-cols-2 max-w-full items-center translate-y-[-5vh]">
+        <div className="grid min-h-[80vh] sm:grid-rows-2 md:grid-rows-1 md:grid-cols-2 max-w-full items-center translate-y-[-5vh] md:pt-[15vh]">
           <div className="flex flex-col gap-y-2 md:gap-y-4 items-start text-left max-w-[90%] md:pl-12">
             <div className="relative h-fit flex justify-start items-start">
               <div className="relative h-fit flex justify-start items-start">
@@ -18,14 +18,14 @@ function Hero() {
                   alt="Garuda Hacks 6.0"
                   width={500}
                   height={300}
-                  className="min-h-[12rem] -translate-x-16 scale-75 md:scale-90 md:-translate-x-6"
+                  className="min-h-[12rem] -translate-x-11 scale-75 md:scale-90 md:-translate-x-6"
                 />
                 <LazyLoadImage
                   src="/assets/hero_label.svg"
                   alt="6.0 label"
                   width={128}
                   height={64}
-                  className="absolute bottom-8 left-[75%] translate-x-[-40%] w-[5rem] md:bottom-2 md:left-[95%] md:translate-x-[-48%] md:w-[8rem]"
+                  className="absolute bottom-6 left-[80%] translate-x-[-40%] w-[5rem] md:bottom-2 md:left-[95%] md:translate-x-[-48%] md:w-[8rem]"
                 />
               </div>
             </div>
@@ -49,7 +49,7 @@ function Hero() {
           <div className="flex flex-col gap-6 md:pl-[8vw] -translate-y-10 md:translate-y-0 md:mt-[6vh] items-start">
             <div className="text-2xl md:text-3xl font-semibold max-w-[80%]">
               Be part of Indonesia&apos;s largest{" "}
-              <span className="font-serif block md:inline-block text-md italic">
+              <span className="font-serif inline-block text-md italic">
                 hackath
                 <LazyLoadImage
                 src="/assets/gear.png"

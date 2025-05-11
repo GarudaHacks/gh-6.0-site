@@ -10,7 +10,7 @@ const theme =
 
 const Tracks = () => {
   return (
-    <section id="tracks" className="max-w-[90%] -translate-x-2 md:translate-x-0">
+    <section id="tracks" className="max-w-[100%]">
       <Container>
         <div className="flex flex-col items-center py-10 px-5 mb-[10vh]">
           <div className="grid md:grid-cols-2 gap-12 w-full max-w-6xl">

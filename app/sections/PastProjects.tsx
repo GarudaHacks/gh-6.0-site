@@ -58,7 +58,7 @@ function PastProjects() {
   }
 
   return (
-    <section id="projects" className="w-full my-[30vh] -translate-x-8 md:translate-x-0">
+    <section id="projects" className="w-full my-[30vh] md:translate-x-0">
       <Container>
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
           <span className="font-serif text-md italic">P</span>ast <span className="font-serif text-md italic">P</span>rojects
@@ -78,7 +78,7 @@ function PastProjects() {
               type="button"
               aria-label="Previous Slide"
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 text-white hover:text-[#FF0068] transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 text-white hover:text-[#FF0068] transition-colors hidden md:block"
             >
               <FaChevronLeft size={24} />
             </button>
@@ -87,7 +87,7 @@ function PastProjects() {
               type="button"
               aria-label="Next Slide"
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 text-white hover:text-[#FF0068] transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 text-white hover:text-[#FF0068] transition-colors hidden md:block"
             >
               <FaChevronRight size={24} />
             </button>
@@ -137,7 +137,7 @@ function PastProjects() {
 }
 
 const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => (
-  <div className="relative h-full overflow-hidden rounded-lg border border-white bg-gradient-to-b from-[rgba(177,177,177,0.20)] to-[rgba(127,127,127,0.60)] backdrop-blur-sm group hover:border-[#FF0068] transition-all duration-300">
+  <div className="relative w-[95%] md:w-auto h-full overflow-hidden rounded-lg border border-white bg-gradient-to-b from-[rgba(177,177,177,0.20)] to-[rgba(127,127,127,0.60)] backdrop-blur-sm group hover:border-[#FF0068] transition-all duration-300">
     <LazyLoadImage
       src={project.image || "/placeholder.svg"}
       alt={project.title}

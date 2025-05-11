@@ -80,7 +80,7 @@ function Stats() {
   }, [hasScrolled]);
 
   return (
-    <section id="stats" className="py-20 -translate-x-8 md:translate-x-0">
+    <section id="stats" className="py-20">
       <Container>
         <h2 className="text-2xl md:text-3xl font-semibold text-white mb-8 text-center">Garuda Hacks by the <span className="text-md font-semibold italic">numbers</span></h2>
         <div

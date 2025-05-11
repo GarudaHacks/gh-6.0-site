@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`min-h-screen max-w-screen overflow-x-hidden overflow-y-scroll flex flex-col bg-background antialiased ${montserrat.variable}`}
+        className={`min-h-screen w-full overflow-x-hidden overflow-y-scroll flex flex-col bg-background antialiased ${montserrat.variable}`}
       >
-        {/* Background Effects */}
-        <div className="inset-0 -z-10 overflow-hidden">
+        {/* TODO: Background assets problematic in mobile */}
+        <div className="inset-0 -z-10 overflow-hidden hidden md:block">
           {/* Top left gradient */}
           <div className="absolute -top-[30vh] -left-[20vw] w-[80vh] h-[80vh] rounded-full bg-gradient-radial from-primary/20 to-transparent blur-3xl" />
 
@@ -38,16 +38,15 @@ export default function RootLayout({
           {/* Top left gradient */}
           <div className="absolute top-[150vh] -left-[20vw] w-[80vh] h-[80vh] rounded-full bg-gradient-radial from-primary/20 to-transparent blur-3xl" />
 
-          {/* Top right gradient */}
+          {/* Top right gradient*/}
           <div className="absolute top-[160vh] -right-[20vw] w-[60vh] h-[60vh] rounded-full bg-gradient-radial from-primary/15 to-transparent blur-3xl" />
 
           {/* Middle left gradient */}
           <div className="absolute top-[240vh] -left-[10vw] w-[70vh] h-[70vh] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
 
-          {/* Bottom right gradient */}
+          {/* Bottom right gradient*/}
           <div className="absolute top-[320vh] -right-[20vw] w-[90vh] h-[90vh] rounded-full bg-gradient-radial from-primary/25 to-transparent blur-3xl" />
 
-          {/* Keep existing curve images */}
           <LazyLoadImage
             src={"assets/curve1.svg"}
             width={500}
@@ -64,7 +63,7 @@ export default function RootLayout({
             src={"assets/curve3.svg"}
             width={800}
             height={800}
-            className="absolute top-[220vh] -right-[25rem]"
+            className="absolute top-[220vh] -right-[25rem] hidden md:block"
           />
           <LazyLoadImage
             src={"assets/curve3.svg"}

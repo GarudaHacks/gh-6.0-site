@@ -47,8 +47,8 @@ function Team() {
   );
 
   return (
-    <div className="relative max-w-[100vw] flex flex-col items-center justify-center md:pb-12 my-[15vh] -translate-x-8 md:translate-x-0">
-      <div className="mb-[6vh] font-normal">
+    <div className="relative max-w-[100vw] flex flex-col items-center justify-center md:pb-12 my-[15vh] md:translate-x-0 overflow-x-hidden md:overflow-x-visible">
+      <div className="mb-[6vh] font-normal px-16 text-center">
         Brought to you with 🩷 by the{" "}
         <span className="font-bold font-serif text-md italic">
           Garuda Hacks
@@ -71,25 +71,25 @@ function Team() {
         ))}
       </div>
 
-      {hoveredMember && (
-        <div className="absolute top-[12rem] flex flex-col md:flex-row items-center gap-4 rounded-lg text-center p-4 transition-all duration-200">
-          <div className="font-semibold text-md">{hoveredMember.name}</div>
+      
+        <div className={`flex flex-col md:flex-row justify-center w-full items-center gap-4 rounded-lg md:min-h-[80px] min-h-[140px] text-center p-4 transition-all duration-200`}>
+          <div className={`font-semibold text-md ${hoveredMember ? "block" : "hidden"}`}>{hoveredMember?.name}</div>
           <LazyLoadImage
             src="/assets/icon/star-four.svg"
             alt="star"
             width={16}
             height={16}
-            className="w-4 h-4"
+            className={`w-4 h-4 ${hoveredMember ? "block" : "hidden"}`}
           />
           <div
             className={`text-sm text-neutral-200 max-w-fit font-medium rounded-full py-1 px-2 border-[1px] ${
-              bgColorOnTitle(hoveredMember.title)?.bg
-            } ${bgColorOnTitle(hoveredMember.title)?.border}`}
+              hoveredMember ? "block" : "hidden"
+            } ${hoveredMember && bgColorOnTitle(hoveredMember.title)?.bg} ${hoveredMember && bgColorOnTitle(hoveredMember.title)?.border}`}
           >
-            {hoveredMember.title}
+            {hoveredMember?.title}
           </div>
         </div>
-      )}
+     
     </div>
   );
 }

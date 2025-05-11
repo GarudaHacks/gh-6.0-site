@@ -9,7 +9,7 @@ function Hero() {
   return (
     <section id="hero">
       <Container>
-        <div className="grid min-h-[80vh] sm:grid-rows-2 md:grid-rows-1 md:grid-cols-2 max-w-full items-center translate-y-[-5vh]">
+        <div className="grid min-h-[80vh] sm:grid-rows-2 md:grid-rows-1 md:grid-cols-2 max-w-full items-center translate-y-[-5vh] md:pt-[15vh]">
           <div className="flex flex-col gap-y-2 md:gap-y-4 items-start text-left max-w-[90%] md:pl-12">
             <div className="relative h-fit flex justify-start items-start">
               <div className="relative h-fit flex justify-start items-start">

@@ -71,25 +71,33 @@ function Team() {
         ))}
       </div>
 
-      
-        <div className={`flex flex-col md:flex-row justify-center w-full items-center gap-4 rounded-lg md:min-h-[80px] min-h-[140px] text-center p-4 transition-all duration-200`}>
-          <div className={`font-semibold text-md ${hoveredMember ? "block" : "hidden"}`}>{hoveredMember?.name}</div>
-          <LazyLoadImage
-            src="/assets/icon/star-four.svg"
-            alt="star"
-            width={16}
-            height={16}
-            className={`w-4 h-4 ${hoveredMember ? "block" : "hidden"}`}
-          />
-          <div
-            className={`text-sm text-neutral-200 max-w-fit font-medium rounded-full py-1 px-2 border-[1px] ${
-              hoveredMember ? "block" : "hidden"
-            } ${hoveredMember && bgColorOnTitle(hoveredMember.title)?.bg} ${hoveredMember && bgColorOnTitle(hoveredMember.title)?.border}`}
-          >
-            {hoveredMember?.title}
-          </div>
+      <div
+        className={`flex flex-col md:flex-row justify-center w-full items-center gap-4 rounded-lg md:min-h-[80px] min-h-[140px] text-center p-4 transition-all duration-200`}
+      >
+        <div
+          className={`font-semibold text-md ${
+            hoveredMember ? "block" : "hidden"
+          }`}
+        >
+          {hoveredMember?.name}
         </div>
-     
+        <LazyLoadImage
+          src="/assets/icon/star-four.svg"
+          alt="star"
+          width={16}
+          height={16}
+          className={`w-4 h-4 ${hoveredMember ? "block" : "hidden"}`}
+        />
+        <div
+          className={`text-sm text-neutral-200 max-w-fit font-medium rounded-full py-1 px-2 border-[1px] ${
+            hoveredMember ? "block" : "hidden"
+          } ${hoveredMember && bgColorOnTitle(hoveredMember.title)?.bg} ${
+            hoveredMember && bgColorOnTitle(hoveredMember.title)?.border
+          }`}
+        >
+          {hoveredMember?.title}
+        </div>
+      </div>
     </div>
   );
 }

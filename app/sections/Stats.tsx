@@ -10,13 +10,21 @@ import { Stat } from "../types/types";
 import Container from "../components/Container";
 
 const stats: Stat[] = [
-  { icon: HiOutlineUserGroup, heading: "6408", subtitle: "Total Participants" },
+  { icon: HiOutlineUserGroup, 
+    heading: "6408", 
+    subtitle: "Total Participants" 
+  },
+  {
+    icon: IoTrophyOutline,
+    heading: "100",
+    subheading: "mil IDR",
+    subtitle: "GH 6.0 Total Prize Pool",
+  },
   {
     icon: AiOutlineCheckCircle,
     heading: "629",
     subtitle: "Projects Submitted",
   },
-  { icon: IoTrophyOutline, heading: "13", subtitle: "Winning Groups" },
 ];
 
 function Stats() {
@@ -25,7 +33,7 @@ function Stats() {
     {
       "6408": 0,
       "629": 0,
-      "13": 0,
+      "100": 0,
     }
   );
   const statsRef = useRef<HTMLDivElement>(null);
@@ -80,9 +88,12 @@ function Stats() {
   }, [hasScrolled]);
 
   return (
-    <section id="stats" className="py-20">
+    <section id="stats" className="py-20 -translate-x-8 md:translate-x-0">
       <Container>
-        <h2 className="text-2xl md:text-3xl font-semibold text-white mb-8 text-center">Garuda Hacks by the <span className="text-md font-semibold italic">numbers</span></h2>
+        <h2 className="text-2xl md:text-3xl font-semibold text-white mb-8 text-center">
+          Garuda Hacks by the{" "}
+          <span className="text-md font-semibold italic">numbers</span>
+        </h2>
         <div
           ref={statsRef}
           className="flex flex-col md:flex-row items-center justify-center gap-8"
@@ -99,7 +110,9 @@ function Stats() {
               <StatsBox
                 icon={stat.icon}
                 heading={currentCounts[stat.heading].toString()}
+                subheading={stat.subheading}
                 subtitle={stat.subtitle}
+                isPrize={index === 1}
               />
             </motion.div>
           ))}
@@ -110,3 +123,4 @@ function Stats() {
 }
 
 export default Stats;
+

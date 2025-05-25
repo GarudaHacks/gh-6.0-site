@@ -77,7 +77,7 @@ export const faqData = [
   },
   {
     question: "Will there be prizes?",
-    answer: "Yes! We have a total prize pool worth over Rp 8,000,000, including cash prizes, sponsor awards, and special category prizes. Specific prize details will be announced closer to the event.",
+    answer: "Yes! We have a total prize pool worth over Rp 100,000,000, including cash prizes, sponsor awards, and special category prizes. Specific prize details will be announced closer to the event.",
     category: "general"
   }
 ];

@@ -3,6 +3,7 @@ import type { IconType } from "react-icons"
 export interface Stat {
   icon: IconType
   heading: string
+  subheading?: string
   subtitle: string
 }
 

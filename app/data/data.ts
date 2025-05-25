@@ -6,19 +6,19 @@ export const tracksData = [
   {
     title: "Sustainability",
     description:
-      "How can we align Indonesia's actions with its identity as a haven of natural resources and diversity? Build tech solutions that tackle environmental challenges.",
+      "",
     icon: "/assets/icon/sustainability.svg",
   },
   {
     title: "Connecting Cultures",
     description:
-      "Indonesia thrives on diversity, yet divisions—geographic, digital, cultural, and social—persist. Through your projects, explore how technology can bridge cultures, empower underrepresented voices, and create inclusive spaces.",
+      "",
     icon: "/assets/icon/culture.svg",
   },
   {
     title: "Education and Equity",
     description:
-      "Indonesia has one of the largest youth populations, yet quality education remains out of reach for many. Rural students often face a lack of trained teachers, learning resources, and even basic infrastructure. Build solutions that make education more accessible, inclusive, and adaptable to all communities.",
+      "",
     icon: "/assets/icon/civic-engagement.svg",
   },
 ];

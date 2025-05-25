@@ -17,7 +17,7 @@ const stats: Stat[] = [
   {
     icon: IoTrophyOutline,
     heading: "100",
-    subheading: "mil IDR",
+    subheading: "million IDR",
     subtitle: "GH 6.0 Total Prize Pool",
   },
   {

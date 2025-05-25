@@ -25,15 +25,15 @@ function StatsBox({
       />
       <div className="flex flex-col w-[80%] md:w-auto items-end md:items-start">
         <div
-          className={`font-bold font-mono text-6xl flex-col items-start md:text-5xl ${
-            isPrize ? "text-primary/90 text-8xl" : "text-white"
+          className={`font-bold font-mono text-6xl flex-col md:items-start md:text-5xl ${
+            isPrize ? "text-primary/90 text-7xl" : "text-white"
           }`}
         >
-          {heading}
+          <span className="flex justify-start">{heading}</span>
           <span
             className={`${
               isPrize ? "text-primary" : "text-gray-200"
-            } text-lg block md:block-inline`}
+            } text-lg md:block-inline flex justify-end mr-1 md:mr-0 md:justify-normal`}
           >
             {subheading}
           </span>

@@ -6,7 +6,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Container from "./Container";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const APPLICATIONS_OPEN = false; // Set to true when applications are open
+const APPLICATIONS_OPEN = true; // Set to true when applications are open
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -130,16 +130,22 @@ function Navbar() {
 
           {/* Apply Button */}
           <div className="hidden md:block">
-            <button
-              className={`px-6 py-2 rounded-full text-white font-semibold hover:bg-opacity-90 transition ${
-                APPLICATIONS_OPEN
-                  ? "cursor-pointer bg-[#FF0068]"
-                  : "cursor-not-allowed bg-[#FF0068] opacity-80"
-              }`}
-              disabled={!APPLICATIONS_OPEN}
+            <a
+              href="https://portal.garudahacks.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {APPLICATIONS_OPEN ? "Apply Now" : "Coming Soon"}
-            </button>
+              <button
+                className={`px-6 py-2 rounded-full text-white font-semibold hover:bg-opacity-90 transition ${
+                  APPLICATIONS_OPEN
+                    ? "cursor-pointer bg-[#FF0068]"
+                    : "cursor-not-allowed bg-[#FF0068] opacity-80"
+                }`}
+                disabled={!APPLICATIONS_OPEN}
+              >
+                {APPLICATIONS_OPEN ? "Apply Now" : "Coming Soon"}
+              </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

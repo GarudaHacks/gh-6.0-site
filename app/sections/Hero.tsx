@@ -63,8 +63,8 @@ function Hero() {
             </div>
             <div className="flex sm:flex-col md:flex-row gap-3">
               <ApplyButton />
-              <button className="px-6 py-3 font-semibold border border-white rounded-md text-white hover:cursor-disabled hover:bg-white hover:text-black transition">
-                Guidebook
+              <button disabled className="px-6 py-3 font-semibold border border-white rounded-md text-white opacity-50 cursor-not-allowed transition">
+                Guidebook (Coming Soon)
               </button>
             </div>
           </div>

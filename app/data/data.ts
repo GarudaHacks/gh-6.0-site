@@ -27,7 +27,7 @@ export const tracksData = [
 export const faqData = [
   {
     question: "What is a hackathon?",
-    answer: "A hackathon is a 36-hour event where participants come together to build innovative solutions to real-world problems.",
+    answer: "A hackathon is a 30-hour event where participants come together to build innovative solutions to real-world problems.",
     category: "general"
   },
   {

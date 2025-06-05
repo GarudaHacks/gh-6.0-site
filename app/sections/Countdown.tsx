@@ -97,7 +97,7 @@ function Countdown({ targetDate }: CountdownProps) {
 
       {/* Caption */}
       <p className="mt-6 text-2xl md:text-3xl sm:text-sm font-semibold text-gray-200 text-center">
-        until registrations open
+        until hackathon starts
       </p>
     </div>
   );

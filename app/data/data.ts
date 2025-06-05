@@ -56,7 +56,7 @@ export const faqData = [
   {
     question: "How long will the event be?",
     answer:
-      "The hackathon runs for 36 hours straight from July 24-26, 2025. While the hacking period is 36 hours, the full event includes opening ceremonies, workshops, networking sessions, judging, and closing ceremonies.",
+      "The hackathon runs for 30 hours straight from July 24-26, 2025. While the hacking period is 30 hours, the full event includes opening ceremonies, workshops, networking sessions, judging, and closing ceremonies.",
     category: "logistics",
   },
   {

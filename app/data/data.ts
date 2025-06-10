@@ -5,20 +5,17 @@
 export const tracksData = [
   {
     title: "Sustainability",
-    description:
-      "",
+    description: "",
     icon: "/assets/icon/sustainability.svg",
   },
   {
     title: "Connecting Cultures",
-    description:
-      "",
+    description: "",
     icon: "/assets/icon/culture.svg",
   },
   {
     title: "Education and Equity",
-    description:
-      "",
+    description: "",
     icon: "/assets/icon/civic-engagement.svg",
   },
 ];
@@ -27,13 +24,15 @@ export const tracksData = [
 export const faqData = [
   {
     question: "What is a hackathon?",
-    answer: "A hackathon is a 30-hour event where participants come together to build innovative solutions to real-world problems.",
-    category: "general"
+    answer:
+      "A hackathon is a 30-hour event where participants come together to build innovative solutions to real-world problems.",
+    category: "general",
   },
   {
     question: "Who can participate?",
-    answer: "Any student studying in a university, high school, or considered as new grad (within one month of graduation) can participate. Whether you're studying computer science, design, business, or any other field - everyone is welcome! You must be at least 14 years old to participate.",
-    category: "general"
+    answer:
+      "Any student studying in a university, high school, or considered as new grad (within one month of graduation) can participate. Whether you're studying computer science, design, business, or any other field - everyone is welcome! You must be at least 14 years old to participate.",
+    category: "general",
   },
   {
     question: "What if I've never coded before?",
@@ -60,14 +59,16 @@ export const faqData = [
     category: "logistics",
   },
   {
-    question: "Do you offer travel reimbursements?",
-    answer: "No. Unfortunately, due to participant constraints we will not be offering travel reimbursements this year.",
-    category: "logistics"
+    question: "Do you offer travel reimbursements or scholarships?",
+    answer:
+      "In line with our mission to bring the hackathon experience to as many people as possible, the Director Board and Committee team at Garuda Hacks are delighted to announce that the Garuda Hacks 6.0 Committee team has pledged to offer the Garuda Inovasi Bangsa Scholarship. These will be offered to outstanding hackathon participants for whom financial need would be a barrier to attendance. You may find more information at https://tinyurl.com/gh6gibscholarinfo and apply for the scholarship at https://tinyurl.com/gh6gibscholarapp",
+    category: "logistics",
   },
   {
     question: "Where can I stay overnight?",
-    answer: "The event venue at Universitas Multimedia Nusantara will be open 24/7 during the hackathon. We provide designated resting areas with air mattresses and basic amenities. There are also several hotels nearby for participants who prefer to stay overnight nearby.",
-    category: "logistics"
+    answer:
+      "The event venue at Universitas Multimedia Nusantara will be open 24/7 during the hackathon. We provide designated resting areas with air mattresses and basic amenities. There are also several hotels nearby for participants who prefer to stay overnight nearby.",
+    category: "logistics",
   },
   {
     question: "What should I bring?",
@@ -77,9 +78,10 @@ export const faqData = [
   },
   {
     question: "Will there be prizes?",
-    answer: "Yes! We have a total prize pool worth over Rp 100,000,000, including cash prizes, sponsor awards, and special category prizes. Specific prize details will be announced closer to the event.",
-    category: "general"
-  }
+    answer:
+      "Yes! We have a total prize pool worth over Rp 100,000,000, including cash prizes, sponsor awards, and special category prizes. Specific prize details will be announced closer to the event.",
+    category: "general",
+  },
 ];
 
 export const projects = [

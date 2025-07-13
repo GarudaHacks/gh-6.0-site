@@ -2,7 +2,7 @@ import React from "react";
 
 function ApplyButton() {
   // change to true when applications open
-  const openApplications = true;
+  const openApplications = false;
   const buttonLabel = openApplications
     ? "Apply"
     : "Application is not yet open";

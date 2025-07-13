@@ -6,7 +6,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Container from "./Container";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const APPLICATIONS_OPEN = true; // Set to true when applications are open
+const APPLICATIONS_OPEN = false; // Set to true when applications are open
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

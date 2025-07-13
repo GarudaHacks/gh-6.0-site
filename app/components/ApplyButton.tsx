@@ -5,7 +5,7 @@ function ApplyButton() {
   const openApplications = false;
   const buttonLabel = openApplications
     ? "Apply"
-    : "Application is not yet open";
+    : "Applications Closed";
 
   return (
     <a

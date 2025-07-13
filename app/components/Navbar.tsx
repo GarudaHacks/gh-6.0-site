@@ -143,7 +143,7 @@ function Navbar() {
                 }`}
                 disabled={!APPLICATIONS_OPEN}
               >
-                {APPLICATIONS_OPEN ? "Apply Now" : "Coming Soon"}
+                {APPLICATIONS_OPEN ? "Apply Now" : "Applications Closed"}
               </button>
             </a>
           </div>
@@ -208,7 +208,7 @@ function Navbar() {
                 2024
               </Link>
               <button className="px-6 py-2 bg-[#FF0068] text-white font-semibold rounded-md hover:bg-opacity-90 transition w-full">
-                {APPLICATIONS_OPEN ? "Apply Now" : "Coming Soon"}
+                {APPLICATIONS_OPEN ? "Apply Now" : "Applications Closed"}
               </button>
             </nav>
           </div>

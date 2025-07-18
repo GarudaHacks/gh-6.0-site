@@ -1,84 +1,36 @@
-import Container from "../components/Container"
-import Image from "next/image"
+'use client';
+import Image from 'next/image';
 
-const sponsors = {
-  platinum: ["/placeholder.svg?height=80&width=200", "/placeholder.svg?height=80&width=200"],
-  gold: [
-    "/placeholder.svg?height=60&width=150",
-    "/placeholder.svg?height=60&width=150",
-    "/placeholder.svg?height=60&width=150",
-  ],
-  silver: [
-    "/placeholder.svg?height=50&width=120",
-    "/placeholder.svg?height=50&width=120",
-    "/placeholder.svg?height=50&width=120",
-    "/placeholder.svg?height=50&width=120",
-  ],
-}
+const sponsors = [
+  { name: 'Caffino', logo: '/assets/sponsors/caffino.png' },
+  { name: 'Mandiri Capital Indonesia', logo: '/assets/sponsors/mandiri.png' },
+  { name: 'Japfa Comfeed', logo: '/assets/sponsors/japfa.png' },
+  { name: 'Dara Permata Sehati', logo: '/assets/sponsors/dpscrop.png' },
+  { name: 'Mayora', logo: '/assets/sponsors/mayoracrop.png' },
+  { name: 'Kamar Entrepreneur Indonesia', logo: '/assets/sponsors/keicrop.png' },
+];
 
-function Sponsors() {
+export default function Sponsors() {
   return (
-    <section id="sponsors" className="w-full py-16">
-      <Container>
-        <h2 className="text-3xl font-bold text-white mb-12 text-center">SPONSORS</h2>
+    <section className="w-full py-20 bg-transparent flex flex-col items-center">
+      <h2 className="text-4xl font-semibold text-white mb-10">Our Sponsors</h2>
 
-        {/* Platinum Sponsors */}
-        <div className="mb-12">
-          <h3 className="text-xl font-semibold text-gray-300 mb-6 text-center">Platinum</h3>
-          <div className="flex justify-center items-center gap-12">
-            {sponsors.platinum.map((logo, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 flex items-center justify-center">
-                <Image
-                  src={logo || "/placeholder.svg"}
-                  alt={`Platinum Sponsor ${index + 1}`}
-                  width={200}
-                  height={80}
-                  className="h-16 object-contain"
-                />
-              </div>
-            ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+        {sponsors.map((sponsor, index) => (
+          <div
+            key={index}
+            className="w-[200px] h-[110px] bg-white/10 hover:bg-white transition duration-300 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center p-3 shadow-md"
+          >
+            <Image
+              src={sponsor.logo}
+              alt={sponsor.name}
+              width={sponsor.name === 'Kamar Entrepreneur Indonesia' ? 300 : 140}
+              height={sponsor.name === 'Kamar Entrepreneur Indonesia' ? 150 : 70}
+              className="object-contain"
+            />
           </div>
-        </div>
-
-        {/* Gold Sponsors */}
-        <div className="mb-12">
-          <h3 className="text-xl font-semibold text-gray-300 mb-6 text-center">Gold</h3>
-          <div className="flex justify-center items-center gap-8 flex-wrap">
-            {sponsors.gold.map((logo, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 flex items-center justify-center">
-                <Image
-                  src={logo || "/placeholder.svg"}
-                  alt={`Gold Sponsor ${index + 1}`}
-                  width={150}
-                  height={60}
-                  className="h-12 object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Silver Sponsors */}
-        <div>
-          <h3 className="text-xl font-semibold text-gray-300 mb-6 text-center">Silver</h3>
-          <div className="flex justify-center items-center gap-6 flex-wrap">
-            {sponsors.silver.map((logo, index) => (
-              <div key={index} className="bg-white rounded-lg p-3 flex items-center justify-center">
-                <Image
-                  src={logo || "/placeholder.svg"}
-                  alt={`Silver Sponsor ${index + 1}`}
-                  width={120}
-                  height={50}
-                  className="h-10 object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </Container>
+        ))}
+      </div>
     </section>
-  )
+  );
 }
-
-export default Sponsors
-

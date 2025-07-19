@@ -6,6 +6,8 @@ import PastProjects from "./sections/PastProjects";
 import Stats from "./sections/Stats";
 import Team from "./sections/Team";
 import Tracks from "./sections/Tracks";
+import Sponsors  from "./sections/Sponsors";
+import ComPar from "./sections/ComPar";
 
 const targetDate = "2025-07-24T00:00:00";
 
@@ -26,9 +28,8 @@ export default function Home() {
         {/*
         <Judges />
         */}
-        {/*
         <Sponsors />
-        */}
+        <ComPar />
         <FAQ />
       </main>
       

@@ -4,13 +4,12 @@ import Image from 'next/image';
 const compar = [
   { name: 'APTIKNAS', logo: '/assets/compar/aptiknas.png' },
   { name: 'Generation Girl', logo: '/assets/compar/geng.png' },
-  { name: 'Indonesia Heritage Society', logo: '/assets/compar/ihs.png' },
+  { name: 'Indonesia Heritage Society', logo: '/assets/compar/ihswhite.png' },
   { name: 'Kamar Entrepreneur Indonesia', logo: '/assets/compar/kei.png' },
   { name: 'Bahari', logo: '/assets/compar/bahari.png' },
   { name: 'One North', logo: '/assets/compar/onenorth.png' },
 ];
 
-// 🔧 Manage specific logo sizes by name
 const getImageSize = (name: string) => {
   switch (name) {
     case 'Kamar Entrepreneur Indonesia':
@@ -33,10 +32,14 @@ export default function ComPar() {
           if (partner.name === 'APTIKNAS') scaleClass = 'scale-110';
           else if (partner.name === 'Indonesia Heritage Society') scaleClass = 'scale-125';
 
+          const isBlackHover = partner.name === 'Indonesia Heritage Society';
+
           return (
             <div
               key={index}
-              className="w-[200px] h-[110px] bg-white/10 hover:bg-white transition duration-300 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center p-3 shadow-md overflow-hidden"
+              className={`w-[200px] h-[110px] bg-white/10 ${
+                isBlackHover ? 'hover:bg-black' : 'hover:bg-white'
+              } transition duration-300 backdrop-blur-md border border-white/20 rounded-xl flex items-center justify-center p-3 shadow-md overflow-hidden`}
             >
               <Image
                 src={partner.logo}

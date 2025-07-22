@@ -2,12 +2,12 @@
 import Image from 'next/image';
 
 const sponsors = [
+  { name: 'WIZ', logo: '/assets/sponsors/wiz.png' },
   { name: 'Caffino', logo: '/assets/sponsors/caffino.png' },
   { name: 'Mandiri Capital Indonesia', logo: '/assets/sponsors/mandiri.png' },
   { name: 'Japfa Comfeed', logo: '/assets/sponsors/japfa.png' },
   { name: 'Dara Permata Sehati', logo: '/assets/sponsors/dpscrop.png' },
   { name: 'Mayora', logo: '/assets/sponsors/mayoracrop.png' },
-  { name: 'Kamar Entrepreneur Indonesia', logo: '/assets/sponsors/keicrop.png' },
 ];
 
 export default function Sponsors() {
@@ -24,8 +24,8 @@ export default function Sponsors() {
             <Image
               src={sponsor.logo}
               alt={sponsor.name}
-              width={sponsor.name === 'Kamar Entrepreneur Indonesia' ? 300 : 140}
-              height={sponsor.name === 'Kamar Entrepreneur Indonesia' ? 150 : 70}
+              width={sponsor.name === 'WIZ' ? 300 : 140}
+              height={sponsor.name === 'WIZ' ? 150 : 70}
               className="object-contain"
             />
           </div>

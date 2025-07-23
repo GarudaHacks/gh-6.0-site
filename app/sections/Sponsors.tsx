@@ -9,7 +9,7 @@ const sponsors = [
   { name: 'Dara Permata Sehati', logo: '/assets/sponsors/dpscrop.png' },
   { name: 'Mayora', logo: '/assets/sponsors/mayoracrop.png' },
 ];
-//test
+//test test2
 export default function Sponsors() {
   return (
     <section className="w-full py-20 bg-transparent flex flex-col items-center">
